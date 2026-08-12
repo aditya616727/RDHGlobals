@@ -1,6 +1,22 @@
 import { PrismaClient } from '@prisma/client';
+import path from 'path';
+import fs from 'fs';
 
-if (!process.env.DATABASE_URL) {
+// On Vercel serverless environment, use writable /tmp directory for SQLite database
+if (process.env.VERCEL) {
+  const tmpDbPath = '/tmp/dev.db';
+  if (!fs.existsSync(tmpDbPath)) {
+    const seedDbPath = path.join(process.cwd(), 'prisma', 'dev.db');
+    if (fs.existsSync(seedDbPath)) {
+      try {
+        fs.copyFileSync(seedDbPath, tmpDbPath);
+      } catch (e) {
+        console.error('Failed to copy seed db to /tmp:', e);
+      }
+    }
+  }
+  process.env.DATABASE_URL = 'file:/tmp/dev.db';
+} else if (!process.env.DATABASE_URL) {
   process.env.DATABASE_URL = 'file:./dev.db';
 }
 
