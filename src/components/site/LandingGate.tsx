@@ -96,7 +96,7 @@ export default function LandingGate() {
       {/* Hero */}
       <div className="intro-hero">
         <div className="intro-eyebrow">RDH Globals — International Trade House</div>
-        <h1>Two premium product lines. One export standard you can verify.</h1>
+        <h1>Crafted on Trust. Defined by Excellence. Trusted Worldwide.</h1>
         <p>
           We export Makhana (fox nuts) and home textiles to buyers across 12+
           countries, backed by government licensing, third-party quality checks,
