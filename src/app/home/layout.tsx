@@ -144,7 +144,6 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
               <span style={{ display: 'block', fontSize: '.82rem', opacity: .7, marginBottom: '6px' }}>IEC Code: 0510XXXXXX</span>
               <span style={{ display: 'block', fontSize: '.82rem', opacity: .7, marginBottom: '6px' }}>FSSAI: 1002005100XXXX</span>
               <span style={{ display: 'block', fontSize: '.82rem', opacity: .7, marginBottom: '6px' }}>APEDA Registered Exporter</span>
-              <span style={{ display: 'block', fontSize: '.82rem', opacity: .7 }}>ISO 22000 &amp; 9001 Certified</span>
             </div>
           </div>
         </div>

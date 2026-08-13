@@ -61,7 +61,7 @@ export default function BrochurePage() {
           </div>
 
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: '20px', borderTop: '1px solid rgba(0,0,0,.08)' }}>
-            <span style={{ fontSize: '.84rem', color: 'var(--text-muted)' }}>FSSAI • APEDA • ISO 22000 • ISO 9001 • OEKO-TEX</span>
+            <span style={{ fontSize: '.84rem', color: 'var(--text-muted)' }}>FSSAI • APEDA </span>
             <button
               className="btn btn-solid"
               onClick={() => alert('Brochure PDF download started. (RDH-Globals-2026-Catalog.pdf)')}

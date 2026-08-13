@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s | RDH Globals",
   },
   description:
-    "RDH Globals is a premier Indian International Trade House specializing in premium Makhana (fox nuts) and luxury home textiles. FSSAI, APEDA, ISO certified. Exporting to 12+ countries.",
+    "RDH Globals is a premier Indian International Trade House specializing in premium Makhana (fox nuts) and luxury home textiles. FSSAI, APEDA. Exporting to 12+ countries.",
   keywords: [
     "RDH Globals",
     "RDH Globals International Trade House",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "RDH Globals — International Trade House",
     description:
-      "Trusted Indian export house. FSSAI, APEDA, ISO certified. Shipping to 12+ countries.",
+      "Trusted Indian export house. FSSAI, APEDA. Shipping to 12+ countries.",
   },
   robots: {
     index: true,
@@ -67,7 +67,7 @@ const organizationJsonLd = {
   url: "https://rdhglobals.com",
   logo: "https://rdhglobals.com/images/logo.jpeg",
   description:
-    "RDH Globals is a premier Indian International Trade House specializing in premium Makhana (fox nuts) and luxury home textiles. FSSAI, APEDA, ISO certified.",
+    "RDH Globals is a premier Indian International Trade House specializing in premium Makhana (fox nuts) and luxury home textiles. FSSAI, APEDA certified.",
   foundingLocation: { "@type": "Place", name: "Gujarat, India" },
   address: {
     "@type": "PostalAddress",

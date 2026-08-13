@@ -72,18 +72,7 @@ export default function HomePage() {
                 <span style={{ fontSize: '1.4rem' }}>🌱</span>
                 <span>APEDA</span>
               </div>
-              <div className="cert-badge">
-                <span style={{ fontSize: '1.4rem' }}>✅</span>
-                <span>ISO 22000</span>
-              </div>
-              <div className="cert-badge">
-                <span style={{ fontSize: '1.4rem' }}>🏅</span>
-                <span>ISO 9001</span>
-              </div>
-              <div className="cert-badge">
-                <span style={{ fontSize: '1.4rem' }}>🧪</span>
-                <span>OEKO-TEX</span>
-              </div>
+
             </div>
             <div className="logistics-pills">
               <div className="logistics-pill">

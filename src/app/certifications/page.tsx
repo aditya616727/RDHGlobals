@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export const metadata = {
   title: 'Certifications & Compliance | RDH Globals',
-  description: 'FSSAI, APEDA, ISO 22000, ISO 9001, and OEKO-TEX export compliance certifications held by RDH Globals.',
+  description: 'FSSAI, APEDA export compliance certifications held by RDH Globals.',
 };
 
 export default function CertificationsPage() {
@@ -22,39 +22,7 @@ export default function CertificationsPage() {
       authority: 'Agricultural & Processed Food Products Export Development Authority',
       desc: 'Government recognition for processed food products export, granting quality certification for international shipments.',
       icon: '🌾',
-    },
-    {
-      title: 'ISO 22000:2018',
-      category: 'Quality Management',
-      code: 'Cert No. ISO-22000-RDH-2024',
-      authority: 'International Organization for Standardization',
-      desc: 'Food safety management system certification covering hazard analysis and critical control point (HACCP) protocols.',
-      icon: '🛡️',
-    },
-    {
-      title: 'ISO 9001:2015',
-      category: 'Quality Assurance',
-      code: 'Cert No. ISO-9001-RDH-2023',
-      authority: 'International Organization for Standardization',
-      desc: 'Quality management system certification ensuring standardized processing, trace-level inspection, and operational consistency.',
-      icon: '🏅',
-    },
-    {
-      title: 'OEKO-TEX Standard 100',
-      category: 'Textile Safety',
-      code: 'Test Report No. SHAO 084XXXX',
-      authority: 'OEKO-TEX Association',
-      desc: 'Global standard testing for harmful substances in textiles, certifying eco-friendly, hypoallergenic bedsheets and linens.',
-      icon: '🧵',
-    },
-    {
-      title: 'Export House Recognition',
-      category: 'Government Certificate',
-      code: 'IEC Code: 0510XXXXXX',
-      authority: 'Directorate General of Foreign Trade (DGFT), India',
-      desc: 'Recognized Star Export House status certifying export volume compliance and financial trade credentials.',
-      icon: '🏛️',
-    },
+    }
   ];
 
   return (

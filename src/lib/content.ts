@@ -18,6 +18,7 @@ export const themeContent = {
     prodTitle: "Product Range",
     prodSub: "Graded, packed, and ready for export.",
     defaultProducts: ["Raw Makhana", "Roasted Makhana", "Premium Grade", "Flavoured Makhana", "Bulk Packaging", "Export Cartons"],
+
     processTitle: "How We Get It Right",
     steps: [
       { title: "Sourcing", desc: "Direct partnerships with regional farms." },

@@ -29,7 +29,7 @@ async function main() {
         "Broken Count": "< 2%",
         "Color": "Natural White / Cream",
         "Shelf Life": "12 Months",
-        "Certifications": "FSSAI, APEDA, ISO 22000, GI Tagged"
+        "Certifications": "FSSAI, APEDA"
       }),
       isFeatured: true,
       sortOrder: 1,

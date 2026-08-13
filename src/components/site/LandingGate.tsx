@@ -80,7 +80,7 @@ export default function LandingGate() {
             Founded in 2010, <strong>RDH Globals</strong> is a premier Indian export house operating two specialized core divisions: <strong>Food Products (Makhana / Fox Nuts)</strong> and <strong>Home Textiles (Luxury Linens &amp; Hospitality Bedding)</strong>.
           </p>
           <p style={{ fontSize: '.98rem', color: '#555', lineHeight: 1.7, marginBottom: '24px' }}>
-            Operating with complete farm-to-container traceability and certified quality compliance (FSSAI, APEDA, ISO 22000, ISO 9001, OEKO-TEX), we manage end-to-end customs clearance, lab testing, private labeling, and ocean freight logistics to 12+ international destinations.
+            Operating with complete farm-to-container traceability and certified quality compliance (FSSAI, APEDA), we manage end-to-end customs clearance, lab testing, private labeling, and ocean freight logistics to 12+ international destinations.
           </p>
 
           {/* Full Company Contact & Registration Grid */}
@@ -114,7 +114,7 @@ export default function LandingGate() {
                 🏛️ Registrations &amp; Licensing
               </div>
               <div style={{ opacity: 0.85 }}>IEC: <strong>0510XXXXXX</strong></div>
-              <div style={{ opacity: 0.85 }}>APEDA / FSSAI / ISO 22000</div>
+              <div style={{ opacity: 0.85 }}>APEDA / FSSAI</div>
             </div>
           </div>
         </div>
@@ -161,10 +161,6 @@ export default function LandingGate() {
       <div className="badge-strip">
         <span className="badge">✓ FSSAI Licensed</span>
         <span className="badge">✓ APEDA Registered</span>
-        <span className="badge">✓ ISO 22000 Certified</span>
-        <span className="badge">✓ ISO 9001 Certified</span>
-        <span className="badge">✓ OEKO-TEX Compliant</span>
-        <span className="badge">✓ Export House Recognition</span>
       </div>
 
       {/* Division Chooser */}
@@ -256,7 +252,6 @@ export default function LandingGate() {
               <div style={{ fontSize: '.82rem', opacity: .7, marginBottom: '6px' }}>IEC: 0510XXXXXX</div>
               <div style={{ fontSize: '.82rem', opacity: .7, marginBottom: '6px' }}>APEDA Reg Exporter</div>
               <div style={{ fontSize: '.82rem', opacity: .7, marginBottom: '6px' }}>FSSAI Lic. 1002005100XXXX</div>
-              <div style={{ fontSize: '.82rem', opacity: .7 }}>ISO 22000 &amp; OEKO-TEX</div>
             </div>
           </div>
         </div>
