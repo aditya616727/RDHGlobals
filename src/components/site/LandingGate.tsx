@@ -108,7 +108,7 @@ export default function LandingGate() {
       <div className="intro-stats">
         <div className="intro-stat">
           <div className="num">15+</div>
-          <div className="lbl">Years in Export</div>
+          <div className="lbl">Years of Experience</div>
         </div>
         <div className="intro-stat">
           <div className="num">12+</div>
