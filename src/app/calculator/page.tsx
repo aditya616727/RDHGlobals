@@ -113,6 +113,11 @@ export default function CalculatorPage() {
               <option value="UK - Felixstowe">🇬🇧 UK — Felixstowe / London Gateway</option>
               <option value="AU - Sydney">🇦🇺 Australia — Port Jackson / Sydney</option>
               <option value="SG - Singapore">🇸🇬 Singapore — Singapore Port</option>
+              <option value="MY - Malaysia">🇲🇾 Malaysia — Malaysia</option>
+              <option value="SL - Sri Lanka">SL - Sri Lanka — Colombo Port</option>
+              <option value="NP - Nepal">🇳🇵 Nepal — Kathmandu Port</option>
+              <option value="NL - Netherlands">🇳🇱 Netherlands — Amsterdam Port</option>
+
             </select>
           </div>
 

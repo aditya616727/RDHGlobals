@@ -32,7 +32,6 @@ export default function LandingGate() {
           <a href="#about-us-landing" style={{ fontSize: '.85rem', fontWeight: 600, color: '#2F5233', textDecoration: 'none' }}>
             About Us
           </a>
-          <div className="intro-since">Exporting Since 2010</div>
         </div>
       </div>
 
@@ -105,7 +104,8 @@ export default function LandingGate() {
               <div style={{ fontSize: '.72rem', textTransform: 'uppercase', letterSpacing: '.1em', color: '#2F5233', fontWeight: 700, marginBottom: '6px' }}>
                 📞 Phone &amp; WhatsApp Desk
               </div>
-              <div><a href="tel:+919318477263" style={{ color: '#2F5233', fontWeight: 600, textDecoration: 'none' }}>+91 93184 77263</a></div>
+              <div><a href="tel:+919877118868" style={{ color: '#2F5233', fontWeight: 600, textDecoration: 'none' }}>+91 98771 18868</a></div>
+              <div><a href="tel:+919991036618" style={{ color: '#2F5233', fontWeight: 600, textDecoration: 'none' }}>+91 99910 36618</a></div>
               <div style={{ opacity: 0.75 }}>💬 WhatsApp B2B Export Line</div>
             </div>
 
@@ -231,10 +231,13 @@ export default function LandingGate() {
               <div style={{ fontSize: '.75rem', textTransform: 'uppercase', letterSpacing: '.1em', opacity: .6, marginBottom: '12px', fontWeight: 600 }}>
                 Direct Contact
               </div>
-              <a href="tel:+919318477263" style={{ display: 'block', color: '#fff', fontSize: '.85rem', fontWeight: 600, textDecoration: 'none', marginBottom: '8px' }}>
-                📞 +91 93184 77263
+              <a href="tel:+919877118868" style={{ display: 'block', color: '#fff', fontSize: '.85rem', fontWeight: 600, textDecoration: 'none', marginBottom: '8px' }}>
+                📞 +91 98771 18868
               </a>
-              <a href="https://wa.me/919318477263" target="_blank" rel="noopener noreferrer" style={{ display: 'block', color: '#25D366', fontSize: '.85rem', textDecoration: 'none', marginBottom: '8px' }}>
+              <a href="tel:+919991036618" style={{ display: 'block', color: '#fff', fontSize: '.85rem', fontWeight: 600, textDecoration: 'none', marginBottom: '8px' }}>
+                📞 +91 99910 36618
+              </a>
+              <a href="https://wa.me/919877118868" target="_blank" rel="noopener noreferrer" style={{ display: 'block', color: '#25D366', fontSize: '.85rem', textDecoration: 'none', marginBottom: '8px' }}>
                 💬 WhatsApp B2B Line
               </a>
               <a href="mailto:export@rdhglobals.com" style={{ display: 'block', color: 'rgba(255,255,255,.8)', fontSize: '.85rem', textDecoration: 'none', marginBottom: '6px' }}>

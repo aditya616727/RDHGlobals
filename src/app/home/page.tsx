@@ -112,7 +112,7 @@ export default function HomePage() {
                 About RDH Globals — International Trade House
               </span>
               <h2 style={{ fontSize: '2.4rem', marginBottom: '20px', lineHeight: 1.2 }}>
-                A premier Indian export house built on uncompromised quality &amp; complete traceability.
+                = uncompromised quality &amp; complete traceability.
               </h2>
               <p style={{ fontSize: '1.02rem', lineHeight: 1.7, opacity: 0.85, marginBottom: '16px' }}>
                 Founded in 2010, <strong>RDH Globals</strong> operates as a leading International Trade House bridging authentic Indian manufacturing with B2B importers, hotel chains, and supermarket distributors across North America, Europe, the Middle East, and Asia-Pacific.
@@ -242,6 +242,10 @@ export default function HomePage() {
               { flag: '🇩🇪', name: 'Germany' },
               { flag: '🇸🇬', name: 'Singapore' },
               { flag: '', name: 'Middle East' },
+              { flag: '🇲🇾', name: 'Malaysia' },
+              { flag: '🇱🇰', name: 'Sri Lanka' },
+              { flag: '🇳🇵', name: 'Nepal' },
+              { flag: '🇳🇱', name: 'Netherlands' },
             ].map((country, i) => (
               <span className="chip" key={i}>
                 {country.flag} {country.name}
@@ -276,8 +280,8 @@ export default function HomePage() {
             <div className="contact-info">
               <div>📧 <strong>Primary Export Email:</strong> export@rdhglobals.com</div>
               <div>✉️ <strong>Sales Desk:</strong> sales@rdhglobals.com</div>
-              <div>📞 <strong>Phone Desk:</strong> +91 93184 77263</div>
-              <div>💬 <strong>WhatsApp Line:</strong> +91 93184 77263</div>
+              <div>📞 <strong>Phone Desk:</strong> +91 98771 18868 / +91 99910 36618</div>
+              <div>💬 <strong>WhatsApp Line:</strong> +91 98771 18868</div>
               <div>📍 <strong>Corporate Office:</strong> RDH Globals, SG Highway, Ahmedabad, Gujarat 380054, India</div>
             </div>
           </div>

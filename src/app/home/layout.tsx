@@ -133,8 +133,9 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
 
             <div className="footer-col">
               <h4>Direct Contact</h4>
-              <a href="tel:+919318477263" style={{ fontWeight: 600, color: '#fff' }}>📞 +91 93184 77263</a>
-              <a href="https://wa.me/919318477263" target="_blank" rel="noopener noreferrer" style={{ color: '#25D366' }}>💬 WhatsApp Export Desk</a>
+              <a href="tel:+919877118868" style={{ fontWeight: 600, color: '#fff' }}>📞 +91 98771 18868</a>
+              <a href="tel:+919991036618" style={{ fontWeight: 600, color: '#fff' }}>📞 +91 99910 36618</a>
+              <a href="https://wa.me/919877118868" target="_blank" rel="noopener noreferrer" style={{ color: '#25D366' }}>💬 WhatsApp Export Desk</a>
               <a href="mailto:export@rdhglobals.com">📧 export@rdhglobals.com</a>
               <a href="mailto:sales@rdhglobals.com">✉️ sales@rdhglobals.com</a>
             </div>
