@@ -8,7 +8,7 @@ export const themeContent = {
     heroCta1: "Explore Makhana",
     aboutTag: "🌾 Field to Container",
     aboutTitle: "A trusted Indian exporter, built on traceability.",
-    aboutP1: "Every batch is sourced directly from partner farms, graded in-house, and packed to the specification of the buyer — no intermediaries, no inconsistency.",
+    aboutP1: "RDH Globals Every batch is sourced directly from partner farms, graded in-house, and packed to the specification of the buyer — no intermediaries, no inconsistency.",
     aboutP2: "We handle documentation, customs, and logistics end-to-end, so partners abroad receive a single point of contact from purchase order to port.",
     why: [
       { icon: "✓", title: "Consistent Grading", desc: "Every lot tested and graded before it leaves the facility." },

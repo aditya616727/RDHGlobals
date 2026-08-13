@@ -4,36 +4,94 @@ import { useTheme } from '@/lib/theme-context';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
 
 export default function LandingGate() {
   const { setTheme } = useTheme();
   const router = useRouter();
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileNavOpen, setMobileNavOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 30);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   function enterSite(theme: 'food' | 'textile') {
     setTheme(theme);
     router.push('/home');
   }
 
+  function smoothScroll(id: string) {
+    setMobileNavOpen(false);
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
   return (
     <div className="intro-screen" id="intro-screen">
-      {/* Top Bar */}
-      <div className="intro-top">
-        <div className="intro-logo" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-          <Image
-            src="/images/logo.jpeg"
-            alt="RDH Globals Logo"
-            width={160}
-            height={45}
-            style={{ objectFit: 'contain', borderRadius: '4px' }}
-            priority
-          />
+      {/* Premium Header */}
+      <header className={`landing-header${scrolled ? ' landing-header--scrolled' : ''}`}>
+        <div className="landing-header__inner">
+          <Link href="/" className="landing-header__logo">
+            <Image
+              src="/images/logo.jpeg"
+              alt="RDH Globals Logo"
+              width={150}
+              height={42}
+              style={{ objectFit: 'contain', borderRadius: '6px' }}
+              priority
+            />
+          </Link>
+
+          <nav className="landing-header__nav" role="navigation">
+            <button className="landing-nav__link" onClick={() => smoothScroll('about-us-landing')}>About</button>
+            <button className="landing-nav__link" onClick={() => smoothScroll('intro-trust-section')}>Why Us</button>
+            <button className="landing-nav__link" onClick={() => smoothScroll('intro-choose-section')}>Divisions</button>
+            <button className="landing-nav__link" onClick={() => smoothScroll('intro-footer-section')}>Contact</button>
+          </nav>
+
+          <div className="landing-header__actions">
+            <a href="mailto:export@rdhglobals.com" className="landing-header__cta">
+              <span className="landing-header__cta-icon">✉</span>
+              Get a Quote
+            </a>
+            <a
+              href="https://wa.me/919877118868?text=Hello%20RDH%20Globals%2C%20I%27m%20interested%20in%20your%20export%20products"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="landing-header__wa"
+              aria-label="WhatsApp"
+            >
+              💬
+            </a>
+          </div>
+
+          <button
+            className={`landing-header__burger${mobileNavOpen ? ' open' : ''}`}
+            onClick={() => setMobileNavOpen(!mobileNavOpen)}
+            aria-label="Toggle menu"
+            aria-expanded={mobileNavOpen}
+          >
+            <span /><span /><span />
+          </button>
         </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '24px' }}>
-          <a href="#about-us-landing" style={{ fontSize: '.85rem', fontWeight: 600, color: '#2F5233', textDecoration: 'none' }}>
-            About Us
-          </a>
-        </div>
-      </div>
+
+        {/* Mobile Dropdown */}
+        {mobileNavOpen && (
+          <div className="landing-header__mobile-menu">
+            <button className="landing-nav__link" onClick={() => smoothScroll('about-us-landing')}>About</button>
+            <button className="landing-nav__link" onClick={() => smoothScroll('intro-trust-section')}>Why Us</button>
+            <button className="landing-nav__link" onClick={() => smoothScroll('intro-choose-section')}>Divisions</button>
+            <button className="landing-nav__link" onClick={() => smoothScroll('intro-footer-section')}>Contact</button>
+            <a href="mailto:export@rdhglobals.com" className="landing-header__cta" style={{ alignSelf: 'flex-start', marginTop: '8px' }}>
+              <span className="landing-header__cta-icon">✉</span>
+              Get a Quote
+            </a>
+          </div>
+        )}
+      </header>
 
       {/* Hero */}
       <div className="intro-hero">
@@ -76,7 +134,7 @@ export default function LandingGate() {
             Connecting Authentic Indian Production to Global B2B Markets
           </h2>
           <p style={{ fontSize: '.98rem', color: '#555', lineHeight: 1.7, marginBottom: '16px' }}>
-            Founded in 2010, <strong>RDH Globals</strong> is a premier Indian export house operating two specialized core divisions: <strong>Food Products (Makhana / Fox Nuts)</strong> and <strong>Home Textiles (Luxury Linens &amp; Hospitality Bedding)</strong>.
+            <strong>RDH Globals</strong> is a premier Indian export house operating two specialized core divisions: <strong>Food Products (Makhana / Fox Nuts)</strong> and <strong>Home Textiles (Luxury Linens &amp; Hospitality Bedding)</strong>.
           </p>
           <p style={{ fontSize: '.98rem', color: '#555', lineHeight: 1.7, marginBottom: '24px' }}>
             Operating with complete farm-to-container traceability and certified quality compliance (FSSAI, APEDA), we manage end-to-end customs clearance, lab testing, private labeling, and ocean freight logistics to 12+ international destinations.
@@ -118,10 +176,52 @@ export default function LandingGate() {
             </div>
           </div>
         </div>
+        {/* Division Chooser */}
+        <div className="intro-choose" id="intro-choose-section" style={{ marginTop: '40px', background: '#fff', border: '1px solid rgba(0,0,0,.08)', borderRadius: '20px', padding: '40px 36px', boxShadow: '0 4px 20px rgba(0,0,0,.04)' }} >
+          <h2 className="intro-question">What are you looking for?</h2>
+          <p className="intro-sub">
+            Choose a category — the site adapts fully to that division.
+          </p>
+          <div className="intro-cards">
+            <div
+              className="intro-card food-card"
+              onClick={() => enterSite('food')}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => e.key === 'Enter' && enterSite('food')}
+            >
+              <div className="ic">🌿</div>
+              <h3>Food Products</h3>
+              <p>
+                Makhana &amp; agricultural exports, graded for premium
+                international buyers.
+              </p>
+              <span className="go">Enter Food Products →</span>
+            </div>
+            <div
+              className="intro-card textile-card"
+              onClick={() => enterSite('textile')}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => e.key === 'Enter' && enterSite('textile')}
+            >
+              <div className="ic">🧵</div>
+              <h3>Home Textiles</h3>
+              <p>
+                Bedsheets, linens &amp; home furnishing, woven for hospitality and
+                retail markets.
+              </p>
+              <span className="go">Enter Home Textiles →</span>
+            </div>
+          </div>
+          <div className="intro-footer-note" style={{ marginBottom: '40px' }}>
+            You can switch categories anytime from the site header.
+          </div>
+        </div>
       </div>
 
       {/* Trust Section */}
-      <div className="intro-trust">
+      <div className="intro-trust" id="intro-trust-section">
         <div className="intro-trust-head">
           <h2>Why global buyers trust RDH Globals</h2>
           <p>
@@ -163,51 +263,12 @@ export default function LandingGate() {
         <span className="badge">✓ APEDA Registered</span>
       </div>
 
-      {/* Division Chooser */}
-      <div className="intro-choose">
-        <h2 className="intro-question">What are you looking for?</h2>
-        <p className="intro-sub">
-          Choose a category — the site adapts fully to that division.
-        </p>
-        <div className="intro-cards">
-          <div
-            className="intro-card food-card"
-            onClick={() => enterSite('food')}
-            role="button"
-            tabIndex={0}
-            onKeyDown={(e) => e.key === 'Enter' && enterSite('food')}
-          >
-            <div className="ic">🌿</div>
-            <h3>Food Products</h3>
-            <p>
-              Makhana &amp; agricultural exports, graded for premium
-              international buyers.
-            </p>
-            <span className="go">Enter Food Products →</span>
-          </div>
-          <div
-            className="intro-card textile-card"
-            onClick={() => enterSite('textile')}
-            role="button"
-            tabIndex={0}
-            onKeyDown={(e) => e.key === 'Enter' && enterSite('textile')}
-          >
-            <div className="ic">🧵</div>
-            <h3>Home Textiles</h3>
-            <p>
-              Bedsheets, linens &amp; home furnishing, woven for hospitality and
-              retail markets.
-            </p>
-            <span className="go">Enter Home Textiles →</span>
-          </div>
-        </div>
-        <div className="intro-footer-note" style={{ marginBottom: '40px' }}>
-          You can switch categories anytime from the site header.
-        </div>
-      </div>
+
+
+
 
       {/* Landing Gate Footer */}
-      <footer style={{ background: '#162544', color: '#fff', padding: '50px 0 28px', borderTop: '1px solid rgba(255,255,255,.1)' }}>
+      <footer id="intro-footer-section" style={{ background: '#162544', color: '#fff', padding: '50px 0 28px', borderTop: '1px solid rgba(255,255,255,.1)' }}>
         <div style={{ maxWidth: '1000px', margin: '0 auto', padding: '0 24px', display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '30px' }}>
           <div style={{ maxWidth: '300px' }}>
             <Image

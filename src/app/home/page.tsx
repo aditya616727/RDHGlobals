@@ -101,9 +101,6 @@ export default function HomePage() {
             <div className="about-visual" style={{ position: 'relative' }}>
               <div className="tag" style={{ background: 'rgba(255,255,255,.9)', borderRadius: '14px', boxShadow: 'var(--shadow-md)' }}>
                 {c.aboutTag}
-                <div style={{ fontSize: '.8rem', opacity: 0.7, marginTop: '6px', fontWeight: 500 }}>
-                  Est. 2010 • Registered Star Exporter
-                </div>
               </div>
             </div>
 
@@ -114,9 +111,6 @@ export default function HomePage() {
               <h2 style={{ fontSize: '2.4rem', marginBottom: '20px', lineHeight: 1.2 }}>
                 = uncompromised quality &amp; complete traceability.
               </h2>
-              <p style={{ fontSize: '1.02rem', lineHeight: 1.7, opacity: 0.85, marginBottom: '16px' }}>
-                Founded in 2010, <strong>RDH Globals</strong> operates as a leading International Trade House bridging authentic Indian manufacturing with B2B importers, hotel chains, and supermarket distributors across North America, Europe, the Middle East, and Asia-Pacific.
-              </p>
               <p style={{ fontSize: '1.02rem', lineHeight: 1.7, opacity: 0.85, marginBottom: '24px' }}>
                 {c.aboutP1} {c.aboutP2} We maintain absolute quality control from raw material selection through export container sealing, giving global buyers total peace of mind.
               </p>
@@ -154,7 +148,7 @@ export default function HomePage() {
               <div style={{ fontSize: '1.8rem', marginBottom: '10px' }}>🔬</div>
               <h4 style={{ fontSize: '1.05rem', marginBottom: '6px', color: 'var(--primary)' }}>100% Lab Tested</h4>
               <p style={{ fontSize: '.86rem', opacity: 0.75, lineHeight: 1.5 }}>
-                Every batch is NABL lab-tested for moisture, purity, and compliance (FSSAI, APEDA, ISO, OEKO-TEX certified).
+                RDH Globals Every batch is NABL lab-tested for moisture, purity, and compliance (FSSAI, APEDA, ISO, OEKO-TEX certified).
               </p>
             </div>
 
