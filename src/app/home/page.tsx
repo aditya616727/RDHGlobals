@@ -235,17 +235,19 @@ export default function HomePage() {
           <div className="countries">
             {[
               { flag: '🇺🇸', name: 'USA' },
-              { flag: '🇨🇦', name: 'Canada' },
               { flag: '🇦🇪', name: 'UAE' },
               { flag: '🇬🇧', name: 'UK' },
+              { flag: '🇨🇦', name: 'Canada' },
               { flag: '🇦🇺', name: 'Australia' },
+              { flag: '🇲🇾', name: 'Malaysia' },
+              { flag: '🇧🇩', name: 'Bangladesh' },
+              { flag: '🇲🇻', name: 'Maldives' },
+              { flag: '🇹🇭', name: 'Thailand' },
+              { flag: '🇱🇰', name: 'Sri Lanka' },
               { flag: '🇩🇪', name: 'Germany' },
               { flag: '🇸🇬', name: 'Singapore' },
-              { flag: '', name: 'Middle East' },
-              { flag: '🇲🇾', name: 'Malaysia' },
-              { flag: '🇱🇰', name: 'Sri Lanka' },
-              { flag: '🇳🇵', name: 'Nepal' },
               { flag: '🇳🇱', name: 'Netherlands' },
+              { flag: '🇳🇵', name: 'Nepal' },
             ].map((country, i) => (
               <span className="chip" key={i}>
                 {country.flag} {country.name}

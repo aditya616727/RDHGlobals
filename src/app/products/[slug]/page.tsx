@@ -27,6 +27,40 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     : `${BASE_URL}/images/logo.jpeg`;
 
   const categoryLabel = product.category === 'food' ? 'Food & Makhana Export' : 'Home Textiles Export';
+  const foodCountryKeywords = product.category === 'food' ? [
+    'Makhana Supplier in India',
+    'Makhana Supplier from India',
+    'Makhana Exporter from India',
+    'Makhana Manufacturer in India',
+    'Roasted Makhana Supplier in USA',
+    'Flavoured Makhana Supplier in USA',
+    'Makhana Supplier from India to USA',
+    'Makhana Exporter from India to USA',
+    'Roasted Makhana Supplier in UAE',
+    'Flavoured Makhana Supplier in UAE',
+    'Makhana Supplier from India to UAE',
+    'Makhana Exporter from India to UAE',
+    'Makhana Supplier from India to UK',
+    'Makhana Exporter from India to UK',
+    'Makhana Supplier from India to Canada',
+    'Makhana Exporter from India to Canada',
+    'Makhana Supplier from India to Australia',
+    'Makhana Exporter from India to Australia',
+    'Makhana Supplier from India to Malaysia',
+    'Makhana Exporter from India to Malaysia',
+    'Makhana Supplier from India to Bangladesh',
+    'Makhana Supplier from India to Maldives',
+    'Makhana Supplier from India to Thailand',
+    'Makhana Supplier from India to Sri Lanka',
+  ] : [
+    'Indian Home Textiles Exporter',
+    'Hotel Linen Supplier from India to USA',
+    'Egyptian Cotton Bedsheets Exporter to UK',
+    'Hospitality Bedding Supplier to UAE',
+    'Luxury Hotel Linen Supplier to Canada',
+    'Bedsheets Exporter to Australia',
+  ];
+
   const keywords = [
     product.name,
     product.subcategory || '',
@@ -41,6 +75,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       ? 'APEDA Registered Makhana Exporter'
       : 'OEKO-TEX Certified Indian Textiles',
     'B2B Private Label Supplier',
+    ...foodCountryKeywords,
   ].filter(Boolean);
 
   return {
