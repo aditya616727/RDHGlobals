@@ -183,7 +183,7 @@ export default function AddProductPage() {
             <label style={{ display: 'block', fontWeight: 600, marginBottom: '6px', fontSize: '.9rem' }}>Packaging</label>
             <input
               type="text"
-              placeholder="e.g. 10kg Vacuum Carton"
+              placeholder="e.g. 10kg Vacuum Box"
               value={formData.packaging}
               onChange={(e) => setFormData({ ...formData, packaging: e.target.value })}
               style={{ width: '100%', padding: '12px', borderRadius: '8px', border: '1px solid #ccc', fontSize: '.9rem' }}

@@ -12,12 +12,12 @@ export const themeContent = {
     aboutP2: "We handle documentation, customs, and logistics end-to-end, so partners abroad receive a single point of contact from purchase order to port.",
     why: [
       { icon: "✓", title: "Consistent Grading", desc: "Every lot tested and graded before it leaves the facility." },
-      { icon: "◆", title: "Custom Packaging", desc: "Private label and bulk formats built to your market's spec." },
+      { icon: "◆", title: "Custom Packaging", desc: "Private label and custom formats built to your market's spec." },
       { icon: "→", title: "Reliable Logistics", desc: "On-time shipping with full documentation handled for you." },
     ],
     prodTitle: "Product Range",
     prodSub: "Graded, packed, and ready for export.",
-    defaultProducts: ["Raw Makhana", "Roasted Makhana", "Premium Grade", "Flavoured Makhana", "Bulk Packaging", "Export Cartons"],
+    defaultProducts: ["Raw Makhana", "Roasted Makhana", "Premium Grade", "Flavoured Makhana"],
 
     processTitle: "How We Get It Right",
     steps: [
@@ -52,7 +52,7 @@ export const themeContent = {
     ],
     prodTitle: "Collection",
     prodSub: "Woven, finished, and ready for export.",
-    defaultProducts: ["Bedsheets", "Pillow Covers", "Comforters", "Hotel Linen", "Duvet Sets", "Home Furnishing"],
+    defaultProducts: ["Bedsheets", "Pillow Covers", "Hotel Linen"],
     processTitle: "How We Get It Right",
     steps: [
       { title: "Sourcing", desc: "Certified cotton from verified textile mills." },

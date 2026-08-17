@@ -21,7 +21,7 @@ async function main() {
       shortDesc: 'Jumbo 6 Suta grade raw fox nuts, hand-sorted for maximum pop size and crispness.',
       gradeInfo: '6 Suta (20mm+)',
       moq: '500 KG',
-      packaging: '10 kg moisture-sealed vacuum bags in 5-ply corrugated export cartons',
+      packaging: '10 kg moisture-sealed vacuum bags in 5-ply corrugated export boxes',
       hsCode: '0813.40.90',
       specifications: JSON.stringify({
         "Grade Size": "6 Suta (Jumbo)",
@@ -48,7 +48,7 @@ async function main() {
       shortDesc: 'Gourmet slow-roasted fox nuts tossed with pure Himalayan salt.',
       gradeInfo: '5 Suta (16-18mm)',
       moq: '250 KG',
-      packaging: '50g/100g nitrogen-flushed pouch packs or 5kg bulk packs',
+      packaging: '50g/100g nitrogen-flushed pouch packs or 5kg master packs',
       hsCode: '2008.19.90',
       specifications: JSON.stringify({
         "Flavor": "Himalayan Pink Salt",
@@ -74,7 +74,7 @@ async function main() {
       shortDesc: 'Bold & spicy roasted lotus seeds coated in authentic Peri Peri seasoning.',
       gradeInfo: '5 Suta (16-18mm)',
       moq: '250 KG',
-      packaging: 'Nitrogen-flushed foil pouch (70g) or bulk export box',
+      packaging: 'Nitrogen-flushed foil pouch (70g) or master export box',
       hsCode: '2008.19.90',
       specifications: JSON.stringify({
         "Flavor": "Fiery Peri Peri",
@@ -90,10 +90,10 @@ async function main() {
       }
     },
     {
-      name: 'Export Grade Bulk Makhana (4 Suta Commercial)',
-      slug: 'export-grade-bulk-makhana-4-suta',
+      name: 'Export Grade Commercial Makhana (4 Suta)',
+      slug: 'export-grade-commercial-makhana-4-suta',
       category: 'food',
-      subcategory: 'Bulk Packaging',
+      subcategory: 'Raw Makhana',
       description: 'Standard 4 Suta commercial grade fox nuts ideal for processing, cereal manufacturing, and spice blending.',
       shortDesc: 'Cost-effective commercial grade fox nuts for industrial food manufacturing.',
       gradeInfo: '4 Suta (12-14mm)',
@@ -109,7 +109,7 @@ async function main() {
       sortOrder: 4,
       images: {
         create: [
-          { url: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&auto=format&fit=crop&q=80', isPrimary: true, alt: 'Bulk 4 Suta Makhana' }
+          { url: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&auto=format&fit=crop&q=80', isPrimary: true, alt: 'Commercial 4 Suta Makhana' }
         ]
       }
     }
@@ -157,7 +157,7 @@ async function main() {
       shortDesc: 'Commercial hotel linen collection crafted for heavy laundry cycles.',
       gradeInfo: '300 TC Percale',
       moq: '200 Sets',
-      packaging: 'Bulk compressed bales with sea-freight waterproofing',
+      packaging: 'Compressed bales with sea-freight waterproofing',
       hsCode: '6302.31.00',
       specifications: JSON.stringify({
         "Material": "80% Cotton / 20% Polyester blend",
@@ -177,7 +177,7 @@ async function main() {
       name: 'Handcrafted Jacquard Duvet & Pillow Sets',
       slug: 'handcrafted-jacquard-duvet-pillow-sets',
       category: 'textile',
-      subcategory: 'Duvet Sets',
+      subcategory: 'Pillow Covers',
       description: 'Intricately woven jacquard patterned duvet covers with coordinating oxford pillow shams. Tailored piping edges and hidden button closures.',
       shortDesc: 'Bespoke jacquard woven duvet cover sets with regal decorative motifs.',
       gradeInfo: '400 TC Jacquard',

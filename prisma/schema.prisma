@@ -17,7 +17,7 @@ model Product {
   shortDesc      String?
   gradeInfo      String?        // e.g. "4 Suta", "5 Suta", "6 Suta", "400 Thread Count"
   moq            String?        // e.g. "500 KG", "100 Sets"
-  packaging      String?        // e.g. "Moisture-sealed 10kg cartons"
+  packaging      String?        // e.g. "Moisture-sealed 10kg boxes"
   hsCode         String?        // e.g. "0813.40.90", "6302.21"
   specifications String?        // JSON string of key-value specs
   isActive       Boolean        @default(true)
