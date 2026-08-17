@@ -1,0 +1,324 @@
+export interface ProductItem {
+  id: string;
+  name: string;
+  slug: string;
+  category: 'food' | 'textile';
+  subcategory: string;
+  description: string;
+  shortDesc: string;
+  gradeInfo: string;
+  moq: string;
+  packaging: string;
+  hsCode: string;
+  seoTitle: string;
+  seoDescription: string;
+  specifications: string;
+  isActive: boolean;
+  isFeatured: boolean;
+  sortOrder: number;
+  images: Array<{ url: string; alt: string; isPrimary: boolean }>;
+}
+
+export const DEFAULT_PRODUCTS: ProductItem[] = [
+  {
+    id: 'prod-food-1',
+    name: 'Raw Premium Makhana (5 and 6 Suta Jumbo)',
+    slug: 'raw-premium-makhana-6-suta',
+    category: 'food',
+    subcategory: 'Raw Makhana',
+    description: 'Hand-picked and traditionally popped 5 and 6 Suta jumbo grade Mithila Makhana (Euryale Ferox). Grown in natural wetland ecosystems of Bihar, laboratory tested for purity, low moisture content, zero chemical additives.',
+    shortDesc: 'Jumbo 5 & 6 Suta grade raw fox nuts, hand-sorted for maximum pop size and crispness.',
+    gradeInfo: '5 & 6 Suta (18-22mm+)',
+    moq: '500 KG',
+    packaging: '10 kg moisture-sealed vacuum bags in 5-ply corrugated export boxes',
+    hsCode: '0813.40.90',
+    seoTitle: 'Raw Premium Makhana (5 & 6 Suta Jumbo) Exporter | RDH Globals',
+    seoDescription: 'Direct Indian exporter of 5 & 6 Suta jumbo raw Makhana (fox nuts). APEDA & FSSAI certified, laboratory tested for B2B global importers and snack manufacturers.',
+    specifications: JSON.stringify({
+      "Grade Size": "5 & 6 Suta (Jumbo)",
+      "Moisture": "< 8%",
+      "Broken Count": "< 2%",
+      "Color": "Natural White / Cream",
+      "Shelf Life": "12 Months",
+      "Certifications": "FSSAI, APEDA"
+    }),
+    isActive: true,
+    isFeatured: true,
+    sortOrder: 1,
+    images: [
+      { url: '/images/premium_makhana.png', alt: 'Raw Premium Makhana (5 and 6 Suta Jumbo)', isPrimary: true }
+    ]
+  },
+  {
+    id: 'prod-food-2',
+    name: 'Himalayan Pink Salt Roasted Makhana',
+    slug: 'himalayan-pink-salt-roasted-makhana',
+    category: 'food',
+    subcategory: 'Roasted Makhana',
+    description: 'Slow-roasted fox nuts seasoned with natural Himalayan pink salt and cold-pressed olive oil. Gluten-free, zero trans-fat, high-protein superfood snack packed for retail and private-label distribution.',
+    shortDesc: 'Gourmet slow-roasted fox nuts tossed with pure Himalayan salt.',
+    gradeInfo: '5 Suta (16-18mm)',
+    moq: '250 KG',
+    packaging: '50g/100g nitrogen-flushed pouch packs or 5kg master packs',
+    hsCode: '2008.19.90',
+    seoTitle: 'Himalayan Pink Salt Roasted Makhana Wholesale Exporter | RDH Globals',
+    seoDescription: 'Wholesale exporter of Himalayan pink salt roasted makhana snacks. Gluten-free, non-GMO, protein-rich superfood ready for retail packaging and international export.',
+    specifications: JSON.stringify({
+      "Flavor": "Himalayan Pink Salt",
+      "Roast Method": "Artisanal Slow Roast (Oil-light)",
+      "Dietary": "Gluten-Free, Vegan, Non-GMO",
+      "Protein": "9.7g per 100g",
+      "Shelf Life": "9 Months"
+    }),
+    isActive: true,
+    isFeatured: true,
+    sortOrder: 2,
+    images: [
+      { url: '/images/rosted_makhana.png', alt: 'Roasted Salted Makhana', isPrimary: true }
+    ]
+  },
+  {
+    id: 'prod-food-3',
+    name: 'Peri Peri Spiced Fox Nuts',
+    slug: 'peri-peri-spiced-fox-nuts',
+    category: 'food',
+    subcategory: 'Flavoured Makhana',
+    description: 'Zesty African Peri Peri spiced roasted makhana for modern health-snack retail markets across Europe and North America. Coated with authentic Peri Peri seasoning and slow-roasted for a bold, fiery crunch.',
+    shortDesc: 'Bold & spicy roasted lotus seeds coated in authentic Peri Peri seasoning.',
+    gradeInfo: '5 Suta (16-18mm)',
+    moq: '250 KG',
+    packaging: 'Nitrogen-flushed foil pouch (70g) or master export box',
+    hsCode: '2008.19.90',
+    seoTitle: 'Peri Peri Flavoured Makhana B2B Exporter | RDH Globals India',
+    seoDescription: 'Indian manufacturer & exporter of Peri Peri spiced roasted fox nuts. High margin superfood snack with private label packaging & full customs clearance.',
+    specifications: JSON.stringify({
+      "Flavor": "Fiery Peri Peri",
+      "Spiciness": "Medium Hot",
+      "Dietary": "Gluten-Free, Vegan",
+      "Shelf Life": "9 Months"
+    }),
+    isActive: true,
+    isFeatured: true,
+    sortOrder: 3,
+    images: [
+      { url: '/images/peri_peri.png', alt: 'Peri Peri Spiced Makhana', isPrimary: true }
+    ]
+  },
+  {
+    id: 'prod-food-4',
+    name: 'Chocolate Coated Premium Makhana',
+    slug: 'chocolate-coated-premium-makhana',
+    category: 'food',
+    subcategory: 'Flavoured Makhana',
+    description: 'Crunchy roasted fox nuts dipped in rich dark chocolate coating. A guilt-free superfood dessert snack combining the nutritional benefits of makhana with premium cocoa — perfect for health-conscious confectionery retail.',
+    shortDesc: 'Premium fox nuts coated in rich dark chocolate — a healthy dessert snack.',
+    gradeInfo: '5 Suta (16-18mm)',
+    moq: '200 KG',
+    packaging: 'Nitrogen-flushed foil pouch (50g/100g) or retail gift box',
+    hsCode: '1806.90.90',
+    seoTitle: 'Chocolate Coated Makhana Exporter & Manufacturer | RDH Globals',
+    seoDescription: 'Gourmet dark chocolate coated roasted makhana superfood snack. Direct export supply for confectionery distributors, supermarkets, and private labels.',
+    specifications: JSON.stringify({
+      "Flavor": "Dark Chocolate",
+      "Cocoa Content": "55% Premium Cocoa",
+      "Dietary": "Gluten-Free, Vegetarian",
+      "Protein": "7.2g per 100g",
+      "Shelf Life": "6 Months"
+    }),
+    isActive: true,
+    isFeatured: true,
+    sortOrder: 4,
+    images: [
+      { url: '/images/chocolate.png', alt: 'Chocolate Coated Makhana', isPrimary: true }
+    ]
+  },
+  {
+    id: 'prod-food-5',
+    name: 'Cheese & Herbs Roasted Makhana',
+    slug: 'cheese-herbs-roasted-makhana',
+    category: 'food',
+    subcategory: 'Flavoured Makhana',
+    description: 'Roasted fox nuts seasoned with tangy cheese powder and aromatic Italian herbs blend. A savory, protein-rich snack crafted for western retail palates and private-label health food distribution.',
+    shortDesc: 'Tangy cheese and herb seasoned roasted fox nuts — savory superfood snacking.',
+    gradeInfo: '5 Suta (16-18mm)',
+    moq: '250 KG',
+    packaging: 'Nitrogen-flushed foil pouch (70g) or master export box',
+    hsCode: '2008.19.90',
+    seoTitle: 'Cheese & Herbs Roasted Makhana Wholesale Exporter | RDH Globals',
+    seoDescription: 'Export supplier of Cheese & Italian Herbs roasted makhana snacks. Clean ingredients, long shelf-life, and FSSAI/APEDA compliant container shipping.',
+    specifications: JSON.stringify({
+      "Flavor": "Cheese & Mixed Herbs",
+      "Spiciness": "Mild",
+      "Dietary": "Gluten-Free, Vegetarian",
+      "Shelf Life": "9 Months"
+    }),
+    isActive: true,
+    isFeatured: false,
+    sortOrder: 5,
+    images: [
+      { url: '/images/cheese.png', alt: 'Cheese & Herbs Makhana', isPrimary: true }
+    ]
+  },
+  {
+    id: 'prod-food-6',
+    name: 'Cream & Onion Roasted Makhana',
+    slug: 'cream-onion-roasted-makhana',
+    category: 'food',
+    subcategory: 'Flavoured Makhana',
+    description: 'Slow-roasted fox nuts tossed with creamy onion seasoning and spring onion flakes. A light, addictive snack with a familiar savory profile loved across global snack markets.',
+    shortDesc: 'Creamy onion seasoned roasted fox nuts — a crowd-favourite savory snack.',
+    gradeInfo: '5 Suta (16-18mm)',
+    moq: '250 KG',
+    packaging: 'Nitrogen-flushed foil pouch (70g) or master export box',
+    hsCode: '2008.19.90',
+    seoTitle: 'Cream & Onion Roasted Makhana Export Supplier | RDH Globals',
+    seoDescription: 'B2B export of Cream & Onion flavoured roasted makhana (fox nuts). Popular savory snack for global retail chains, distributors, and private brands.',
+    specifications: JSON.stringify({
+      "Flavor": "Cream & Onion",
+      "Spiciness": "Mild",
+      "Dietary": "Gluten-Free, Vegetarian",
+      "Shelf Life": "9 Months"
+    }),
+    isActive: true,
+    isFeatured: false,
+    sortOrder: 6,
+    images: [
+      { url: '/images/onion_cream.png', alt: 'Cream & Onion Makhana', isPrimary: true }
+    ]
+  },
+  {
+    id: 'prod-food-7',
+    name: 'Pudina Mint Roasted Makhana',
+    slug: 'pudina-mint-roasted-makhana',
+    category: 'food',
+    subcategory: 'Flavoured Makhana',
+    description: 'Freshly roasted fox nuts dusted with cooling pudina (mint) seasoning and a hint of lime. A refreshing, low-calorie superfood snack popular in South Asian and Middle Eastern markets.',
+    shortDesc: 'Cool mint seasoned roasted fox nuts — refreshing and light superfood snack.',
+    gradeInfo: '5 Suta (16-18mm)',
+    moq: '250 KG',
+    packaging: 'Nitrogen-flushed foil pouch (70g) or master export box',
+    hsCode: '2008.19.90',
+    seoTitle: 'Pudina Mint Roasted Makhana Exporter | RDH Globals India',
+    seoDescription: 'Authentic Indian Pudina (Mint) & Lime roasted makhana exporter. Low-calorie healthy snack with container-ready packaging and export documentation.',
+    specifications: JSON.stringify({
+      "Flavor": "Pudina (Mint) & Lime",
+      "Spiciness": "Mild-Medium",
+      "Dietary": "Gluten-Free, Vegan",
+      "Shelf Life": "9 Months"
+    }),
+    isActive: true,
+    isFeatured: false,
+    sortOrder: 7,
+    images: [
+      { url: '/images/pudina.png', alt: 'Pudina Mint Makhana', isPrimary: true }
+    ]
+  },
+  {
+    id: 'prod-food-8',
+    name: 'Export Grade Commercial Makhana (4 Suta)',
+    slug: 'export-grade-commercial-makhana-4-suta',
+    category: 'food',
+    subcategory: 'Raw Makhana',
+    description: 'Standard 4 Suta commercial grade fox nuts ideal for processing, cereal manufacturing, and spice blending.',
+    shortDesc: 'Cost-effective commercial grade fox nuts for industrial food manufacturing.',
+    gradeInfo: '4 Suta (12-14mm)',
+    moq: '1000 KG',
+    packaging: '25kg HDPE woven sacks with inner liner',
+    hsCode: '0813.40.90',
+    seoTitle: '4 Suta Commercial Grade Raw Makhana B2B Supplier | RDH Globals',
+    seoDescription: 'Industrial bulk supplier of 4 Suta commercial raw Makhana for food processing, flour milling, and breakfast cereals. Consistent grading & wholesale pricing.',
+    specifications: JSON.stringify({
+      "Grade": "4 Suta",
+      "Application": "Snack processing, Cereal blending, Flour milling",
+      "Moisture": "< 9%"
+    }),
+    isActive: true,
+    isFeatured: false,
+    sortOrder: 8,
+    images: [
+      { url: '/images/makhana.png', alt: 'Commercial 4 Suta Makhana', isPrimary: true }
+    ]
+  },
+  {
+    id: 'prod-textile-1',
+    name: 'Luxury 600 TC Egyptian Cotton Bedsheet Set',
+    slug: 'luxury-600-tc-egyptian-cotton-bedsheet-set',
+    category: 'textile',
+    subcategory: 'Bedsheets',
+    description: 'Ultra-soft 600 thread count long-staple combed cotton bedsheets, satin weave finish. Designed for 5-star hotel chains and luxury home furnishing retailers in US & Europe.',
+    shortDesc: '600 TC long-staple cotton luxury bedding set with silky satin sheen finish.',
+    gradeInfo: '600 Thread Count',
+    moq: '100 Sets per color',
+    packaging: 'Eco-friendly embroidered cotton tote bag or retail PVC zip box',
+    hsCode: '6302.21.00',
+    seoTitle: '600 TC Egyptian Cotton Bedsheets Exporter & Manufacturer | RDH Globals',
+    seoDescription: 'Manufacturer & exporter of 600 Thread Count Egyptian cotton bedsheet sets for 5-star hotels and luxury home retailers. OEKO-TEX certified, bespoke sizing.',
+    specifications: JSON.stringify({
+      "Material": "100% Long-Staple Combed Cotton",
+      "Thread Count": "600 TC",
+      "Weave": "Sateen",
+      "Sizes": "King, Queen, Double, Single",
+      "Shrinkage": "< 3%",
+      "Certification": "OEKO-TEX Standard 100 Class 1"
+    }),
+    isActive: true,
+    isFeatured: true,
+    sortOrder: 9,
+    images: [
+      { url: '/images/bedsheet.png', alt: '600 TC Bedsheet Set', isPrimary: true }
+    ]
+  },
+  {
+    id: 'prod-textile-2',
+    name: 'Hospitality Plush Percale Hotel Linen Collection',
+    slug: 'hospitality-plush-percale-hotel-linen-collection',
+    category: 'textile',
+    subcategory: 'Hotel Linen',
+    description: 'Crisp, durable 300 TC percale hotel bed linen engineered for commercial laundering, institutional bleach resistance, and long service life in resort hospitality.',
+    shortDesc: 'Commercial hotel linen collection crafted for heavy laundry cycles.',
+    gradeInfo: '300 TC Percale',
+    moq: '200 Sets',
+    packaging: 'Compressed bales with sea-freight waterproofing',
+    hsCode: '6302.31.00',
+    seoTitle: '300 TC Percale Hotel Bed Linen Wholesale Exporter | RDH Globals',
+    seoDescription: 'Commercial hotel bed linen collection engineered for 150+ wash cycles. Crisp 300 TC percale weave for global resort chains and institutional hospitality buyers.',
+    specifications: JSON.stringify({
+      "Material": "80% Cotton / 20% Polyester blend",
+      "Thread Count": "300 TC Crisp Percale",
+      "Commercial Laundering": "Tested for 150+ wash cycles",
+      "Color": "Optical Bright White"
+    }),
+    isActive: true,
+    isFeatured: true,
+    sortOrder: 10,
+    images: [
+      { url: '/images/hotel_linen.png', alt: 'Hotel Linen Collection', isPrimary: true }
+    ]
+  },
+  {
+    id: 'prod-textile-3',
+    name: 'Handcrafted Jacquard Luxury Linen Collection',
+    slug: 'handcrafted-jacquard-luxury-linen-collection',
+    category: 'textile',
+    subcategory: 'Hotel Linen',
+    description: 'Intricately woven jacquard patterned luxury linens engineered for high-end hospitality and resort suites. Tailored piping edges and concealed closures.',
+    shortDesc: 'Bespoke jacquard woven luxury linens with regal decorative motifs.',
+    gradeInfo: '400 TC Jacquard',
+    moq: '150 Sets',
+    packaging: 'Rigid presentation gift box or retail hanger bag',
+    hsCode: '6302.21.00',
+    seoTitle: '400 TC Jacquard Luxury Hotel Linen Exporter | RDH Globals',
+    seoDescription: 'Bespoke 400 TC jacquard woven luxury hotel linen collection. Custom motifs, bio-washed cotton, and institutional export packaging for international hotels.',
+    specifications: JSON.stringify({
+      "Technique": "Damask Jacquard Weave",
+      "Composition": "Pure Bio-Washed Cotton",
+      "Closure": "Concealed YKK Zipper / Button"
+    }),
+    isActive: true,
+    isFeatured: false,
+    sortOrder: 11,
+    images: [
+      { url: '/images/bedsheet.png', alt: 'Jacquard Luxury Linen Collection', isPrimary: true }
+    ]
+  }
+];

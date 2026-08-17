@@ -2,15 +2,51 @@ import { prisma } from '@/lib/prisma';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import { DEFAULT_PRODUCTS, ProductItem } from '@/lib/default-products';
 
 const BASE_URL = 'https://rdhglobals.com';
 
+async function getProductBySlug(slug: string): Promise<ProductItem | null> {
+  try {
+    const p = await prisma.product.findFirst({
+      where: { slug },
+      include: { images: true },
+    });
+    if (p) {
+      return {
+        id: p.id,
+        name: p.name,
+        slug: p.slug,
+        category: p.category as 'food' | 'textile',
+        subcategory: p.subcategory || '',
+        description: p.description,
+        shortDesc: p.shortDesc || '',
+        gradeInfo: p.gradeInfo || '',
+        moq: p.moq || '',
+        packaging: p.packaging || '',
+        hsCode: p.hsCode || '',
+        seoTitle: p.seoTitle || '',
+        seoDescription: p.seoDescription || '',
+        specifications: p.specifications || '{}',
+        isActive: p.isActive,
+        isFeatured: p.isFeatured,
+        sortOrder: p.sortOrder,
+        images: p.images && p.images.length > 0
+          ? p.images.map((img) => ({ url: img.url, alt: img.alt || p.name, isPrimary: img.isPrimary }))
+          : [],
+      };
+    }
+  } catch (e) {
+    console.error('Prisma query error in getProductBySlug, using fallback:', e);
+  }
+
+  const fallback = DEFAULT_PRODUCTS.find((item) => item.slug === slug);
+  return fallback || null;
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const product = await prisma.product.findFirst({
-    where: { slug },
-    include: { images: true },
-  });
+  const product = await getProductBySlug(slug);
 
   if (!product) return {};
 
@@ -124,10 +160,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function ProductDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const product = await prisma.product.findFirst({
-    where: { slug },
-    include: { images: true },
-  });
+  const product = await getProductBySlug(slug);
 
   if (!product) {
     notFound();

@@ -1,25 +1,62 @@
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
+import { DEFAULT_PRODUCTS, ProductItem } from '@/lib/default-products';
 
 export const dynamic = 'force-dynamic';
 
-export async function GET(request: Request) {
-  try {
-    const { searchParams } = new URL(request.url);
-    const category = searchParams.get('category');
-    const subcategory = searchParams.get('subcategory');
-    const query = searchParams.get('q');
-    const featured = searchParams.get('featured');
+function filterFallbackProducts(params: {
+  category: string | null;
+  subcategory: string | null;
+  query: string | null;
+  featured: string | null;
+}): ProductItem[] {
+  let list = [...DEFAULT_PRODUCTS];
 
+  if (params.category && params.category !== 'all') {
+    list = list.filter((p) => p.category === params.category);
+  }
+
+  if (params.subcategory && params.subcategory !== 'all') {
+    list = list.filter(
+      (p) => p.subcategory.toLowerCase() === params.subcategory!.toLowerCase()
+    );
+  }
+
+  if (params.featured === 'true') {
+    list = list.filter((p) => p.isFeatured);
+  }
+
+  if (params.query) {
+    const q = params.query.toLowerCase();
+    list = list.filter(
+      (p) =>
+        p.name.toLowerCase().includes(q) ||
+        p.description.toLowerCase().includes(q) ||
+        p.subcategory.toLowerCase().includes(q) ||
+        (p.gradeInfo && p.gradeInfo.toLowerCase().includes(q))
+    );
+  }
+
+  return list.sort((a, b) => a.sortOrder - b.sortOrder);
+}
+
+export async function GET(request: Request) {
+  const { searchParams } = new URL(request.url);
+  const category = searchParams.get('category');
+  const subcategory = searchParams.get('subcategory');
+  const query = searchParams.get('q');
+  const featured = searchParams.get('featured');
+
+  try {
     const where: any = {
       isActive: true,
     };
 
-    if (category) {
+    if (category && category !== 'all') {
       where.category = category;
     }
 
-    if (subcategory) {
+    if (subcategory && subcategory !== 'all') {
       where.subcategory = subcategory;
     }
 
@@ -49,10 +86,17 @@ export async function GET(request: Request) {
       ],
     });
 
-    return NextResponse.json({ success: true, products });
+    if (products && products.length > 0) {
+      return NextResponse.json({ success: true, products });
+    }
+
+    // Fallback if DB is empty (e.g. on fresh Vercel serverless instances)
+    const fallback = filterFallbackProducts({ category, subcategory, query, featured });
+    return NextResponse.json({ success: true, products: fallback });
   } catch (error) {
-    console.error('Failed to fetch products:', error);
-    return NextResponse.json({ success: true, products: [] });
+    console.error('Database query fallback invoked:', error);
+    const fallback = filterFallbackProducts({ category, subcategory, query, featured });
+    return NextResponse.json({ success: true, products: fallback });
   }
 }
 
@@ -98,23 +142,26 @@ export async function POST(request: Request) {
         hsCode,
         specifications: typeof specifications === 'object' ? JSON.stringify(specifications) : specifications,
         isFeatured: Boolean(isFeatured),
-        images: {
-          create: (images || []).map((img: any, idx: number) => ({
+        images: images && images.length > 0 ? {
+          create: images.map((img: { url: string; alt?: string; isPrimary?: boolean }, index: number) => ({
             url: img.url,
             alt: img.alt || name,
-            isPrimary: idx === 0,
-            sortOrder: idx,
+            isPrimary: img.isPrimary || index === 0,
+            sortOrder: index,
           })),
-        },
+        } : undefined,
       },
       include: {
         images: true,
       },
     });
 
-    return NextResponse.json({ success: true, product }, { status: 201 });
+    return NextResponse.json({ success: true, product });
   } catch (error) {
     console.error('Failed to create product:', error);
-    return NextResponse.json({ success: false, error: 'Failed to create product' }, { status: 500 });
+    return NextResponse.json(
+      { success: false, error: 'Failed to create product' },
+      { status: 500 }
+    );
   }
 }

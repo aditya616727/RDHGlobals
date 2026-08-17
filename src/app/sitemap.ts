@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import { prisma } from '@/lib/prisma';
+import { DEFAULT_PRODUCTS } from '@/lib/default-products';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://rdhglobals.com';
@@ -27,7 +28,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       select: { slug: true, updatedAt: true },
     });
 
-    const productPages = products.map((p) => ({
+    const list = products.length > 0 ? products : DEFAULT_PRODUCTS.map(p => ({ slug: p.slug, updatedAt: new Date() }));
+
+    const productPages = list.map((p) => ({
       url: `${baseUrl}/products/${p.slug}`,
       lastModified: p.updatedAt,
       changeFrequency: 'weekly' as const,
@@ -36,6 +39,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     return [...staticPages, ...productPages];
   } catch (e) {
-    return staticPages;
+    const productPages = DEFAULT_PRODUCTS.map((p) => ({
+      url: `${baseUrl}/products/${p.slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    }));
+    return [...staticPages, ...productPages];
   }
 }
