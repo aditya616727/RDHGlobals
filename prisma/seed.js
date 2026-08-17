@@ -13,18 +13,18 @@ async function main() {
   // Create Food Products
   const foodProducts = [
     {
-      name: 'Raw Premium Makhana (6 Suta Jumbo)',
+      name: 'Raw Premium Makhana (5 and 6 Suta Jumbo)',
       slug: 'raw-premium-makhana-6-suta',
       category: 'food',
       subcategory: 'Raw Makhana',
-      description: 'Hand-picked and traditionally popped 6 Suta grade Mithila Makhana (Euryale Ferox). Grown in natural wetland ecosystems of Bihar, laboratory tested for purity, low moisture content, zero chemical additives.',
-      shortDesc: 'Jumbo 6 Suta grade raw fox nuts, hand-sorted for maximum pop size and crispness.',
-      gradeInfo: '6 Suta (20mm+)',
+      description: 'Hand-picked and traditionally popped 5 and 6 Suta jumbo grade Mithila Makhana (Euryale Ferox). Grown in natural wetland ecosystems of Bihar, laboratory tested for purity, low moisture content, zero chemical additives.',
+      shortDesc: 'Jumbo 5 & 6 Suta grade raw fox nuts, hand-sorted for maximum pop size and crispness.',
+      gradeInfo: '5 & 6 Suta (18-22mm+)',
       moq: '500 KG',
       packaging: '10 kg moisture-sealed vacuum bags in 5-ply corrugated export boxes',
       hsCode: '0813.40.90',
       specifications: JSON.stringify({
-        "Grade Size": "6 Suta (Jumbo)",
+        "Grade Size": "5 & 6 Suta (Jumbo)",
         "Moisture": "< 8%",
         "Broken Count": "< 2%",
         "Color": "Natural White / Cream",
@@ -35,7 +35,7 @@ async function main() {
       sortOrder: 1,
       images: {
         create: [
-          { url: '/images/premium_makhana.png', isPrimary: true, alt: 'Raw Premium Makhana 6 Suta' }
+          { url: '/images/premium_makhana.png', isPrimary: true, alt: 'Raw Premium Makhana (5 and 6 Suta Jumbo)' }
         ]
       }
     },
@@ -70,7 +70,7 @@ async function main() {
       slug: 'peri-peri-spiced-fox-nuts',
       category: 'food',
       subcategory: 'Flavoured Makhana',
-      description: 'Zesty African Peri Peri spiced roasted makhana for modern health-snack retail markets across Europe and North America.',
+      description: 'Zesty African Peri Peri spiced roasted makhana for modern health-snack retail markets across Europe and North America. Coated with authentic Peri Peri seasoning and slow-roasted for a bold, fiery crunch.',
       shortDesc: 'Bold & spicy roasted lotus seeds coated in authentic Peri Peri seasoning.',
       gradeInfo: '5 Suta (16-18mm)',
       moq: '250 KG',
@@ -79,13 +79,115 @@ async function main() {
       specifications: JSON.stringify({
         "Flavor": "Fiery Peri Peri",
         "Spiciness": "Medium Hot",
+        "Dietary": "Gluten-Free, Vegan",
         "Shelf Life": "9 Months"
       }),
-      isFeatured: false,
+      isFeatured: true,
       sortOrder: 3,
       images: {
         create: [
-          { url: '/images/flavored_makhana.png', isPrimary: true, alt: 'Peri Peri Makhana' }
+          { url: '/images/peri_peri.png', isPrimary: true, alt: 'Peri Peri Spiced Makhana' }
+        ]
+      }
+    },
+    {
+      name: 'Chocolate Coated Premium Makhana',
+      slug: 'chocolate-coated-premium-makhana',
+      category: 'food',
+      subcategory: 'Flavoured Makhana',
+      description: 'Crunchy roasted fox nuts dipped in rich dark chocolate coating. A guilt-free superfood dessert snack combining the nutritional benefits of makhana with premium cocoa — perfect for health-conscious confectionery retail.',
+      shortDesc: 'Premium fox nuts coated in rich dark chocolate — a healthy dessert snack.',
+      gradeInfo: '5 Suta (16-18mm)',
+      moq: '200 KG',
+      packaging: 'Nitrogen-flushed foil pouch (50g/100g) or retail gift box',
+      hsCode: '1806.90.90',
+      specifications: JSON.stringify({
+        "Flavor": "Dark Chocolate",
+        "Cocoa Content": "55% Premium Cocoa",
+        "Dietary": "Gluten-Free, Vegetarian",
+        "Protein": "7.2g per 100g",
+        "Shelf Life": "6 Months"
+      }),
+      isFeatured: true,
+      sortOrder: 5,
+      images: {
+        create: [
+          { url: '/images/chocolate.png', isPrimary: true, alt: 'Chocolate Coated Makhana' }
+        ]
+      }
+    },
+    {
+      name: 'Cheese & Herbs Roasted Makhana',
+      slug: 'cheese-herbs-roasted-makhana',
+      category: 'food',
+      subcategory: 'Flavoured Makhana',
+      description: 'Roasted fox nuts seasoned with tangy cheese powder and aromatic Italian herbs blend. A savory, protein-rich snack crafted for western retail palates and private-label health food distribution.',
+      shortDesc: 'Tangy cheese and herb seasoned roasted fox nuts — savory superfood snacking.',
+      gradeInfo: '5 Suta (16-18mm)',
+      moq: '250 KG',
+      packaging: 'Nitrogen-flushed foil pouch (70g) or master export box',
+      hsCode: '2008.19.90',
+      specifications: JSON.stringify({
+        "Flavor": "Cheese & Mixed Herbs",
+        "Spiciness": "Mild",
+        "Dietary": "Gluten-Free, Vegetarian",
+        "Shelf Life": "9 Months"
+      }),
+      isFeatured: false,
+      sortOrder: 6,
+      images: {
+        create: [
+          { url: '/images/cheese.png', isPrimary: true, alt: 'Cheese & Herbs Makhana' }
+        ]
+      }
+    },
+    {
+      name: 'Cream & Onion Roasted Makhana',
+      slug: 'cream-onion-roasted-makhana',
+      category: 'food',
+      subcategory: 'Flavoured Makhana',
+      description: 'Slow-roasted fox nuts tossed with creamy onion seasoning and spring onion flakes. A light, addictive snack with a familiar savory profile loved across global snack markets.',
+      shortDesc: 'Creamy onion seasoned roasted fox nuts — a crowd-favourite savory snack.',
+      gradeInfo: '5 Suta (16-18mm)',
+      moq: '250 KG',
+      packaging: 'Nitrogen-flushed foil pouch (70g) or master export box',
+      hsCode: '2008.19.90',
+      specifications: JSON.stringify({
+        "Flavor": "Cream & Onion",
+        "Spiciness": "Mild",
+        "Dietary": "Gluten-Free, Vegetarian",
+        "Shelf Life": "9 Months"
+      }),
+      isFeatured: false,
+      sortOrder: 7,
+      images: {
+        create: [
+          { url: '/images/onion_cream.png', isPrimary: true, alt: 'Cream & Onion Makhana' }
+        ]
+      }
+    },
+    {
+      name: 'Pudina Mint Roasted Makhana',
+      slug: 'pudina-mint-roasted-makhana',
+      category: 'food',
+      subcategory: 'Flavoured Makhana',
+      description: 'Freshly roasted fox nuts dusted with cooling pudina (mint) seasoning and a hint of lime. A refreshing, low-calorie superfood snack popular in South Asian and Middle Eastern markets.',
+      shortDesc: 'Cool mint seasoned roasted fox nuts — refreshing and light superfood snack.',
+      gradeInfo: '5 Suta (16-18mm)',
+      moq: '250 KG',
+      packaging: 'Nitrogen-flushed foil pouch (70g) or master export box',
+      hsCode: '2008.19.90',
+      specifications: JSON.stringify({
+        "Flavor": "Pudina (Mint) & Lime",
+        "Spiciness": "Mild-Medium",
+        "Dietary": "Gluten-Free, Vegan",
+        "Shelf Life": "9 Months"
+      }),
+      isFeatured: false,
+      sortOrder: 8,
+      images: {
+        create: [
+          { url: '/images/pudina.png', isPrimary: true, alt: 'Pudina Mint Makhana' }
         ]
       }
     },
@@ -106,7 +208,7 @@ async function main() {
         "Moisture": "< 9%"
       }),
       isFeatured: false,
-      sortOrder: 4,
+      sortOrder: 9,
       images: {
         create: [
           { url: '/images/makhana.png', isPrimary: true, alt: 'Commercial 4 Suta Makhana' }
