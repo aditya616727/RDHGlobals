@@ -21,7 +21,11 @@ export const themeContent = {
       { name: "Raw Makhana", img: "/images/makhana.png" },
       { name: "Roasted Makhana", img: "/images/rosted_makhana.png" },
       { name: "Premium Grade", img: "/images/premium_makhana.png" },
-      { name: "Flavoured Makhana", img: "/images/flavored_makhana.png" },
+      { name: "Peri Peri", img: "/images/peri_peri.png" },
+      { name: "Chocolate Coated", img: "/images/chocolate.png" },
+      { name: "Cheese & Herbs", img: "/images/cheese.png" },
+      { name: "Cream & Onion", img: "/images/onion_cream.png" },
+      { name: "Pudina Mint", img: "/images/pudina.png" },
     ],
 
     processTitle: "How We Get It Right",
