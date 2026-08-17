@@ -194,12 +194,18 @@ export default function HomePage() {
           <h2>{c.prodTitle}</h2>
           <p>{c.prodSub}</p>
           <div className="prod-grid">
-            {c.defaultProducts.map((name, i) => (
-              <div className="prod-card" key={i}>
-                <div className="prod-thumb" />
-                <div className="label">{name}</div>
-              </div>
-            ))}
+            {c.defaultProducts.map((item, i) => {
+              const name = typeof item === 'string' ? item : item.name;
+              const img = typeof item === 'string' ? null : item.img;
+              return (
+                <div className="prod-card" key={i}>
+                  <div className="prod-thumb">
+                    {img && <img src={img} alt={name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />}
+                  </div>
+                  <div className="label">{name}</div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

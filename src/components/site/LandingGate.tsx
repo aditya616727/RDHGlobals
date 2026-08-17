@@ -208,7 +208,7 @@ export default function LandingGate() {
               <div className="ic">🧵</div>
               <h3>Home Textiles</h3>
               <p>
-                Bedsheets, linens &amp; home furnishing, woven for hospitality and
+                Bedsheets &amp; premium linens, woven for hospitality and
                 retail markets.
               </p>
               <span className="go">Enter Home Textiles →</span>

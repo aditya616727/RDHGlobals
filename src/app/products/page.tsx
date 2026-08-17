@@ -24,6 +24,7 @@ export default function ProductsPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedSubcategory, setSelectedSubcategory] = useState<string>('all');
 
   useEffect(() => {
     async function fetchProducts() {
@@ -33,6 +34,9 @@ export default function ProductsPage() {
         const params = new URLSearchParams();
         if (selectedCategory !== 'all') {
           params.append('category', selectedCategory);
+        }
+        if (selectedSubcategory !== 'all') {
+          params.append('subcategory', selectedSubcategory);
         }
         if (searchQuery) {
           params.append('q', searchQuery);
@@ -52,15 +56,25 @@ export default function ProductsPage() {
       }
     }
     fetchProducts();
-  }, [selectedCategory, searchQuery]);
+  }, [selectedCategory, selectedSubcategory, searchQuery]);
+
+  const foodSubcategories = ['Raw Makhana', 'Roasted Makhana', 'Flavoured Makhana'];
+  const textileSubcategories = ['Bedsheets', 'Hotel Linen'];
+
+  const currentSubcategories =
+    selectedCategory === 'food'
+      ? foodSubcategories
+      : selectedCategory === 'textile'
+      ? textileSubcategories
+      : Array.from(new Set([...foodSubcategories, ...textileSubcategories]));
 
   return (
     <div className="wrap" style={{ padding: '60px 28px 100px' }}>
       <div style={{ marginBottom: '40px', textAlign: 'center' }}>
         <span className="eyebrow">RDH Globals Catalog</span>
-        <h1 style={{ fontSize: '2.5rem', marginBottom: '12px' }}>Product Range</h1>
-        <p style={{ opacity: 0.7, maxWidth: '640px', margin: '0 auto' }}>
-          Graded, quality-inspected, and container-ready food and home textile export items.
+        <h1 style={{ fontSize: '2.5rem', marginBottom: '12px', letterSpacing: '-0.02em' }}>Product Range</h1>
+        <p style={{ opacity: 0.7, maxWidth: '640px', margin: '0 auto', fontSize: '1rem', lineHeight: 1.6 }}>
+          Graded, laboratory-inspected, and container-ready food &amp; home textile export items for global markets.
         </p>
       </div>
 
@@ -68,77 +82,162 @@ export default function ProductsPage() {
       <div
         style={{
           display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          flexWrap: 'wrap',
+          flexDirection: 'column',
           gap: '16px',
           marginBottom: '40px',
           background: 'var(--secondary)',
-          padding: '16px 24px',
-          borderRadius: '14px',
+          padding: '24px',
+          borderRadius: '16px',
+          border: '1px solid rgba(0,0,0,.06)',
         }}
       >
-        <div style={{ display: 'flex', gap: '10px' }}>
-          <button
-            className={`btn ${selectedCategory === 'all' ? 'btn-solid' : 'btn-ghost'}`}
-            style={{ color: selectedCategory === 'all' ? '#fff' : 'var(--text)', padding: '8px 18px', fontSize: '.85rem' }}
-            onClick={() => setSelectedCategory('all')}
-          >
-            All Products
-          </button>
-          <button
-            className={`btn ${selectedCategory === 'food' ? 'btn-solid' : 'btn-ghost'}`}
-            style={{ color: selectedCategory === 'food' ? '#fff' : 'var(--text)', padding: '8px 18px', fontSize: '.85rem' }}
-            onClick={() => {
-              setSelectedCategory('food');
-              setTheme('food');
-            }}
-          >
-            🌿 Food (Makhana)
-          </button>
-          <button
-            className={`btn ${selectedCategory === 'textile' ? 'btn-solid' : 'btn-ghost'}`}
-            style={{ color: selectedCategory === 'textile' ? '#fff' : 'var(--text)', padding: '8px 18px', fontSize: '.85rem' }}
-            onClick={() => {
-              setSelectedCategory('textile');
-              setTheme('textile');
-            }}
-          >
-            🧵 Home Textiles
-          </button>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '16px' }}>
+          {/* Main Category Tabs */}
+          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+            <button
+              className={`btn ${selectedCategory === 'all' ? 'btn-solid' : 'btn-ghost'}`}
+              style={{ color: selectedCategory === 'all' ? '#fff' : 'var(--text)', padding: '8px 20px', fontSize: '.88rem' }}
+              onClick={() => {
+                setSelectedCategory('all');
+                setSelectedSubcategory('all');
+              }}
+            >
+              All Products
+            </button>
+            <button
+              className={`btn ${selectedCategory === 'food' ? 'btn-solid' : 'btn-ghost'}`}
+              style={{ color: selectedCategory === 'food' ? '#fff' : 'var(--text)', padding: '8px 20px', fontSize: '.88rem' }}
+              onClick={() => {
+                setSelectedCategory('food');
+                setSelectedSubcategory('all');
+                setTheme('food');
+              }}
+            >
+              🌾 Food Division (Makhana)
+            </button>
+            <button
+              className={`btn ${selectedCategory === 'textile' ? 'btn-solid' : 'btn-ghost'}`}
+              style={{ color: selectedCategory === 'textile' ? '#fff' : 'var(--text)', padding: '8px 20px', fontSize: '.88rem' }}
+              onClick={() => {
+                setSelectedCategory('textile');
+                setSelectedSubcategory('all');
+                setTheme('textile');
+              }}
+            >
+              🧵 Home Textiles
+            </button>
+          </div>
+
+          {/* Search Input */}
+          <div style={{ position: 'relative', minWidth: '260px' }}>
+            <input
+              type="text"
+              placeholder="Search by product, grade, or spec..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              style={{
+                width: '100%',
+                padding: '10px 16px',
+                borderRadius: '10px',
+                border: '1px solid rgba(0,0,0,.15)',
+                fontSize: '.9rem',
+                outline: 'none',
+                background: '#fff',
+              }}
+            />
+            {searchQuery && (
+              <button
+                onClick={() => setSearchQuery('')}
+                style={{
+                  position: 'absolute',
+                  right: '12px',
+                  top: '50%',
+                  transform: 'translateY(-50%)',
+                  background: 'none',
+                  border: 'none',
+                  cursor: 'pointer',
+                  fontSize: '.85rem',
+                  color: '#888',
+                }}
+              >
+                ✕
+              </button>
+            )}
+          </div>
         </div>
 
-        <input
-          type="text"
-          placeholder="Search products..."
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-          style={{
-            padding: '10px 16px',
-            borderRadius: '8px',
-            border: '1px solid rgba(0,0,0,.15)',
-            width: '260px',
-            fontSize: '.9rem',
-          }}
-        />
+        {/* Subcategory Pills */}
+        <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', paddingTop: '12px', borderTop: '1px solid rgba(0,0,0,.06)' }}>
+          <span style={{ fontSize: '.82rem', fontWeight: 600, color: 'var(--text-muted)', alignSelf: 'center', marginRight: '4px' }}>
+            Filter:
+          </span>
+          <button
+            style={{
+              padding: '4px 14px',
+              borderRadius: '999px',
+              border: selectedSubcategory === 'all' ? '1px solid var(--primary)' : '1px solid rgba(0,0,0,.12)',
+              background: selectedSubcategory === 'all' ? 'var(--primary)' : '#fff',
+              color: selectedSubcategory === 'all' ? '#fff' : 'var(--text)',
+              fontSize: '.8rem',
+              fontWeight: 500,
+              cursor: 'pointer',
+              transition: 'all .2s',
+            }}
+            onClick={() => setSelectedSubcategory('all')}
+          >
+            All Subcategories
+          </button>
+          {currentSubcategories.map((sub) => (
+            <button
+              key={sub}
+              style={{
+                padding: '4px 14px',
+                borderRadius: '999px',
+                border: selectedSubcategory === sub ? '1px solid var(--primary)' : '1px solid rgba(0,0,0,.12)',
+                background: selectedSubcategory === sub ? 'var(--primary)' : '#fff',
+                color: selectedSubcategory === sub ? '#fff' : 'var(--text)',
+                fontSize: '.8rem',
+                fontWeight: 500,
+                cursor: 'pointer',
+                transition: 'all .2s',
+              }}
+              onClick={() => setSelectedSubcategory(sub)}
+            >
+              {sub}
+            </button>
+          ))}
+        </div>
       </div>
 
       {/* Product Cards Grid */}
       {loading ? (
-        <div style={{ textAlign: 'center', padding: '60px', color: 'var(--text-muted)' }}>
+        <div style={{ textAlign: 'center', padding: '80px 0', color: 'var(--text-muted)' }}>
+          <div style={{ fontSize: '2rem', marginBottom: '12px' }}>🔄</div>
           Loading RDH Globals catalog...
         </div>
       ) : products.length === 0 ? (
-        <div style={{ textAlign: 'center', padding: '60px 0' }}>
-          <h3>No products found</h3>
-          <p style={{ opacity: 0.6, marginTop: '8px' }}>Try clearing your search query or selecting a different category.</p>
+        <div style={{ textAlign: 'center', padding: '80px 20px', background: 'var(--secondary)', borderRadius: '16px' }}>
+          <h3 style={{ fontSize: '1.3rem', marginBottom: '8px' }}>No products found</h3>
+          <p style={{ opacity: 0.6, maxWidth: '400px', margin: '0 auto 20px', fontSize: '.9rem' }}>
+            We couldn&apos;t find any items matching your current filters or search query.
+          </p>
+          <button
+            className="btn btn-solid"
+            onClick={() => {
+              setSelectedCategory('all');
+              setSelectedSubcategory('all');
+              setSearchQuery('');
+            }}
+          >
+            Reset All Filters
+          </button>
         </div>
       ) : (
         <div className="prod-grid">
           {products.map((p) => (
             <Link key={p.id} href={`/products/${p.slug}`} style={{ textDecoration: 'none' }}>
               <div className="prod-card" style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
-                <div className="prod-thumb" style={{ position: 'relative' }}>
+                <div className="prod-thumb" style={{ position: 'relative', aspectRatio: '4/3' }}>
                   {p.images && p.images[0] ? (
                     <img src={p.images[0].url} alt={p.images[0].alt || p.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   ) : (
@@ -158,23 +257,28 @@ export default function ProductsPage() {
                         fontWeight: 600,
                         padding: '4px 10px',
                         borderRadius: '999px',
+                        boxShadow: '0 2px 8px rgba(0,0,0,.15)',
                       }}
                     >
                       {p.gradeInfo}
                     </span>
                   )}
                 </div>
-                <div style={{ padding: '20px', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
-                  <span style={{ fontSize: '.75rem', textTransform: 'uppercase', color: 'var(--primary)', fontWeight: 600, marginBottom: '6px' }}>
+                <div style={{ padding: '22px', display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+                  <span style={{ fontSize: '.75rem', textTransform: 'uppercase', color: 'var(--primary)', fontWeight: 700, marginBottom: '8px', letterSpacing: '0.04em' }}>
                     {p.subcategory || p.category}
                   </span>
-                  <h3 style={{ fontSize: '1.05rem', marginBottom: '8px', color: 'var(--text)' }}>{p.name}</h3>
-                  <p style={{ fontSize: '.84rem', opacity: 0.7, marginBottom: '16px', flexGrow: 1, lineHeight: 1.5 }}>
-                    {p.shortDesc || p.description.slice(0, 90) + '...'}
+                  <h3 style={{ fontSize: '1.1rem', marginBottom: '10px', color: 'var(--text)', lineHeight: 1.35, fontWeight: 700 }}>
+                    {p.name}
+                  </h3>
+                  <p style={{ fontSize: '.86rem', opacity: 0.75, marginBottom: '20px', flexGrow: 1, lineHeight: 1.55, color: 'var(--text)' }}>
+                    {p.shortDesc || p.description.slice(0, 95) + '...'}
                   </p>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '.8rem', fontWeight: 600, color: 'var(--primary)' }}>
-                    <span>MOQ: {p.moq || 'Contact for MOQ'}</span>
-                    <span>View Spec →</span>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '.82rem', fontWeight: 600, color: 'var(--primary)', paddingTop: '12px', borderTop: '1px solid rgba(0,0,0,.06)' }}>
+                    <span>MOQ: {p.moq || 'Contact'}</span>
+                    <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+                      View Spec &rarr;
+                    </span>
                   </div>
                 </div>
               </div>

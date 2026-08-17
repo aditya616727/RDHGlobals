@@ -54,7 +54,7 @@ export default function BrochurePage() {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px' }}>
               {c.defaultProducts.map((item, idx) => (
                 <div key={idx} style={{ padding: '14px 18px', background: 'var(--secondary)', borderRadius: '10px', fontSize: '.9rem', fontWeight: 600 }}>
-                  🔹 {item}
+                  🔹 {typeof item === 'string' ? item : item.name}
                 </div>
               ))}
             </div>

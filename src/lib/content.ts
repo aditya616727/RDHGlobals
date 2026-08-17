@@ -17,7 +17,12 @@ export const themeContent = {
     ],
     prodTitle: "Product Range",
     prodSub: "Graded, packed, and ready for export.",
-    defaultProducts: ["Raw Makhana", "Roasted Makhana", "Premium Grade", "Flavoured Makhana"],
+    defaultProducts: [
+      { name: "Raw Makhana", img: "/images/makhana.png" },
+      { name: "Roasted Makhana", img: "/images/rosted_makhana.png" },
+      { name: "Premium Grade", img: "/images/premium_makhana.png" },
+      { name: "Flavoured Makhana", img: "/images/flavored_makhana.png" },
+    ],
 
     processTitle: "How We Get It Right",
     steps: [
@@ -52,7 +57,10 @@ export const themeContent = {
     ],
     prodTitle: "Collection",
     prodSub: "Woven, finished, and ready for export.",
-    defaultProducts: ["Bedsheets", "Pillow Covers", "Hotel Linen"],
+    defaultProducts: [
+      { name: "Bedsheets", img: "/images/bedsheet.png" },
+      { name: "Hotel Linen", img: "/images/hotel_linen.png" },
+    ],
     processTitle: "How We Get It Right",
     steps: [
       { title: "Sourcing", desc: "Certified cotton from verified textile mills." },

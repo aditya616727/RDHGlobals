@@ -35,7 +35,7 @@ async function main() {
       sortOrder: 1,
       images: {
         create: [
-          { url: 'https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?w=800&auto=format&fit=crop&q=80', isPrimary: true, alt: 'Raw Premium Makhana 6 Suta' }
+          { url: '/images/premium_makhana.png', isPrimary: true, alt: 'Raw Premium Makhana 6 Suta' }
         ]
       }
     },
@@ -61,7 +61,7 @@ async function main() {
       sortOrder: 2,
       images: {
         create: [
-          { url: 'https://images.unsplash.com/photo-1599490659213-e2b9527bd087?w=800&auto=format&fit=crop&q=80', isPrimary: true, alt: 'Roasted Salted Makhana' }
+          { url: '/images/rosted_makhana.png', isPrimary: true, alt: 'Roasted Salted Makhana' }
         ]
       }
     },
@@ -85,7 +85,7 @@ async function main() {
       sortOrder: 3,
       images: {
         create: [
-          { url: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?w=800&auto=format&fit=crop&q=80', isPrimary: true, alt: 'Peri Peri Makhana' }
+          { url: '/images/flavored_makhana.png', isPrimary: true, alt: 'Peri Peri Makhana' }
         ]
       }
     },
@@ -109,7 +109,7 @@ async function main() {
       sortOrder: 4,
       images: {
         create: [
-          { url: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&auto=format&fit=crop&q=80', isPrimary: true, alt: 'Commercial 4 Suta Makhana' }
+          { url: '/images/makhana.png', isPrimary: true, alt: 'Commercial 4 Suta Makhana' }
         ]
       }
     }
@@ -144,7 +144,7 @@ async function main() {
       sortOrder: 1,
       images: {
         create: [
-          { url: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&auto=format&fit=crop&q=80', isPrimary: true, alt: '600 TC Bedsheet Set' }
+          { url: '/images/bedsheet.png', isPrimary: true, alt: '600 TC Bedsheet Set' }
         ]
       }
     },
@@ -169,17 +169,17 @@ async function main() {
       sortOrder: 2,
       images: {
         create: [
-          { url: 'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=800&auto=format&fit=crop&q=80', isPrimary: true, alt: 'Hotel Linen Collection' }
+          { url: '/images/hotel_linen.png', isPrimary: true, alt: 'Hotel Linen Collection' }
         ]
       }
     },
     {
-      name: 'Handcrafted Jacquard Duvet & Pillow Sets',
-      slug: 'handcrafted-jacquard-duvet-pillow-sets',
+      name: 'Handcrafted Jacquard Luxury Linen Collection',
+      slug: 'handcrafted-jacquard-luxury-linen-collection',
       category: 'textile',
-      subcategory: 'Pillow Covers',
-      description: 'Intricately woven jacquard patterned duvet covers with coordinating oxford pillow shams. Tailored piping edges and hidden button closures.',
-      shortDesc: 'Bespoke jacquard woven duvet cover sets with regal decorative motifs.',
+      subcategory: 'Hotel Linen',
+      description: 'Intricately woven jacquard patterned luxury linens engineered for high-end hospitality and resort suites. Tailored piping edges and concealed closures.',
+      shortDesc: 'Bespoke jacquard woven luxury linens with regal decorative motifs.',
       gradeInfo: '400 TC Jacquard',
       moq: '150 Sets',
       packaging: 'Rigid presentation gift box or retail hanger bag',
@@ -193,7 +193,7 @@ async function main() {
       sortOrder: 3,
       images: {
         create: [
-          { url: 'https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?w=800&auto=format&fit=crop&q=80', isPrimary: true, alt: 'Jacquard Duvet Set' }
+          { url: '/images/bedsheet.png', isPrimary: true, alt: 'Jacquard Duvet Set' }
         ]
       }
     }
