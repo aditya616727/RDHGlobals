@@ -18,26 +18,35 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: "RDH Globals — International Trade House | Makhana & Home Textiles Exporter",
+    default: "RDH Globals — International Trade House | Makhana, Amla & Home Textiles Exporter",
     template: "%s | RDH Globals",
   },
   description:
-    "RDH Globals is a premier Indian International Trade House specializing in premium Makhana (fox nuts) and luxury home textiles. FSSAI, APEDA. Exporting to 12+ countries.",
+    "RDH Globals is a premier Indian International Trade House specializing in premium Makhana (fox nuts), fresh & processed Amla (Indian gooseberry), and luxury home textiles. FSSAI, APEDA certified. Exporting to 12+ countries.",
   keywords: [
     "Makhana Supplier in India",
     "Makhana Supplier from India",
     "Makhana Exporter from India",
     "Makhana Manufacturer in India",
+    "Amla Supplier in India",
+    "Amla Exporter from India",
+    "Indian Gooseberry Exporter",
+    "Fresh Amla Exporter",
+    "Organic Amla Powder Supplier",
+    "Amla Candy Manufacturer",
+    "Cold Pressed Amla Juice Exporter",
     "Roasted Makhana Supplier in India",
     "Flavoured Makhana Supplier in India",
     "Roasted Makhana Supplier in USA",
     "Flavoured Makhana Supplier in USA",
     "Makhana Supplier from India to USA",
     "Makhana Exporter from India to USA",
+    "Amla Exporter from India to USA",
     "Roasted Makhana Supplier in UAE",
     "Flavoured Makhana Supplier in UAE",
     "Makhana Supplier from India to UAE",
     "Makhana Exporter from India to UAE",
+    "Amla Supplier from India to UAE",
     "Roasted Makhana Supplier in UK",
     "Flavoured Makhana Supplier in UK",
     "Makhana Supplier from India to UK",
@@ -72,6 +81,7 @@ export const metadata: Metadata = {
     "Makhana Exporter from India to Sri Lanka",
     "RDH Globals",
     "fox nuts wholesale supplier",
+    "Indian gooseberry bulk export",
     "Indian home textiles exporter",
     "hotel linen supplier India",
     "bedsheets exporter",
@@ -85,15 +95,15 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://rdhglobals.com",
     siteName: "RDH Globals International Trade House",
-    title: "RDH Globals — International Trade House | Premium Indian Makhana & Home Textiles Exporter",
+    title: "RDH Globals — International Trade House | Premium Indian Makhana, Amla & Home Textiles Exporter",
     description:
-      "Direct Indian exporter & manufacturer of raw, roasted & flavoured makhana (fox nuts) and luxury home textiles. Shipping to USA, UAE, UK, Canada, Australia, Malaysia & worldwide.",
+      "Direct Indian exporter & manufacturer of raw, roasted & flavoured makhana (fox nuts), fresh and processed Amla products, and luxury home textiles. Shipping to USA, UAE, UK, Canada, Australia, Malaysia & worldwide.",
   },
   twitter: {
     card: "summary_large_image",
     title: "RDH Globals — International Trade House",
     description:
-      "Premier Indian Makhana & Textile Exporter. FSSAI & APEDA certified. Shipping container loads worldwide.",
+      "Premier Indian Makhana, Amla & Textile Exporter. FSSAI & APEDA certified. Shipping container loads worldwide.",
   },
   robots: {
     index: true,
@@ -110,7 +120,7 @@ const organizationJsonLd = {
   url: "https://rdhglobals.com",
   logo: "https://rdhglobals.com/images/logo.jpeg",
   description:
-    "RDH Globals is a premier Indian International Trade House and direct manufacturer/exporter of premium raw, roasted, and flavoured Makhana (fox nuts) and hospitality home textiles.",
+    "RDH Globals is a premier Indian International Trade House and direct manufacturer/exporter of premium raw, roasted, and flavoured Makhana (fox nuts), fresh & processed Amla (Indian gooseberry), and hospitality home textiles.",
   foundingLocation: { "@type": "Place", name: "Gujarat, India" },
   address: {
     "@type": "PostalAddress",
@@ -126,6 +136,8 @@ const organizationJsonLd = {
   areaServed: ["US", "CA", "AE", "GB", "AU", "MY", "BD", "MV", "TH", "LK", "DE", "SG", "NL", "NP"],
   knowsAbout: [
     "Makhana Exporter from India",
+    "Amla Exporter from India",
+    "Indian Gooseberry Wholesale Exporter",
     "Roasted Makhana Supplier in USA",
     "Flavoured Makhana Supplier in UAE",
     "Makhana Supplier from India to UK",

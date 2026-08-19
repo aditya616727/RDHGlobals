@@ -62,22 +62,33 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       : `${BASE_URL}${product.images[0].url}`
     : `${BASE_URL}/images/logo.jpeg`;
 
-  const categoryLabel = product.category === 'food' ? 'Food & Makhana Export' : 'Home Textiles Export';
+  const categoryLabel = product.category === 'food' ? 'Food & Agricultural Export (Makhana & Amla)' : 'Home Textiles Export';
   const foodCountryKeywords = product.category === 'food' ? [
     'Makhana Supplier in India',
     'Makhana Supplier from India',
     'Makhana Exporter from India',
     'Makhana Manufacturer in India',
+    'Amla Supplier in India',
+    'Amla Exporter from India',
+    'Indian Gooseberry Exporter',
+    'Fresh Amla Exporter from India',
+    'Amla Candy Manufacturer India',
+    'Organic Amla Powder Exporter',
+    'Cold Pressed Amla Juice Supplier',
     'Roasted Makhana Supplier in USA',
     'Flavoured Makhana Supplier in USA',
     'Makhana Supplier from India to USA',
     'Makhana Exporter from India to USA',
+    'Amla Exporter from India to USA',
+    'Amla Powder Supplier to USA',
     'Roasted Makhana Supplier in UAE',
     'Flavoured Makhana Supplier in UAE',
     'Makhana Supplier from India to UAE',
     'Makhana Exporter from India to UAE',
+    'Amla Supplier from India to UAE',
     'Makhana Supplier from India to UK',
     'Makhana Exporter from India to UK',
+    'Amla Exporter from India to UK',
     'Makhana Supplier from India to Canada',
     'Makhana Exporter from India to Canada',
     'Makhana Supplier from India to Australia',

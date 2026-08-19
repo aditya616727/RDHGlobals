@@ -3,9 +3,9 @@
 
 export const themeContent = {
   food: {
-    heroTitle: "Premium Makhana, grown honestly, shipped worldwide.",
-    heroSub: "Farm-sourced fox nuts, graded and packed to international food-export standards, delivered to buyers across four continents.",
-    heroCta1: "Explore Makhana",
+    heroTitle: "Premium Makhana & Amla, grown honestly, shipped worldwide.",
+    heroSub: "Farm-sourced fox nuts and fresh & processed Amla (Indian Gooseberry), graded and packed to international food-export standards, delivered across four continents.",
+    heroCta1: "Explore Food Range",
     aboutTag: "🌾 Field to Container",
     aboutTitle: "A trusted Indian exporter, built on traceability.",
     aboutP1: "RDH Globals Every batch is sourced directly from partner farms, graded in-house, and packed to the specification of the buyer — no intermediaries, no inconsistency.",
@@ -23,6 +23,10 @@ export const themeContent = {
       { name: "Premium Grade", img: "/images/premium_makhana.png" },
       { name: "Peri Peri", img: "/images/peri_peri.png" },
       { name: "Chocolate Coated", img: "/images/chocolate.png" },
+      { name: "Fresh Amla", img: "/images/fresh_amla.jpg" },
+      { name: "Amla Candy", img: "/images/amla_candy.jpg" },
+      { name: "Amla Powder", img: "/images/amla_powder.jpg" },
+      { name: "Amla Juice", img: "/images/amla_juice.jpg" },
       { name: "Cheese & Herbs", img: "/images/cheese.png" },
       { name: "Cream & Onion", img: "/images/onion_cream.png" },
       { name: "Pudina Mint", img: "/images/pudina.png" },

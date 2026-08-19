@@ -58,7 +58,7 @@ export default function ProductsPage() {
     fetchProducts();
   }, [selectedCategory, selectedSubcategory, searchQuery]);
 
-  const foodSubcategories = ['Raw Makhana', 'Roasted Makhana', 'Flavoured Makhana'];
+  const foodSubcategories = ['Raw Makhana', 'Roasted Makhana', 'Flavoured Makhana', 'Fresh Amla', 'Amla Candy', 'Amla Powder', 'Amla Juice'];
   const textileSubcategories = ['Bedsheets', 'Hotel Linen'];
 
   const currentSubcategories =
@@ -113,7 +113,7 @@ export default function ProductsPage() {
                 setTheme('food');
               }}
             >
-              🌾 Food Division (Makhana)
+              🌾 Food Division (Makhana &amp; Amla)
             </button>
             <button
               className={`btn ${selectedCategory === 'textile' ? 'btn-solid' : 'btn-ghost'}`}

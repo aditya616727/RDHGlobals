@@ -193,8 +193,7 @@ export default function LandingGate() {
               <div className="ic">🌿</div>
               <h3>Food Products</h3>
               <p>
-                Makhana &amp; agricultural exports, graded for premium
-                international buyers.
+                Premium Makhana &amp; Amla superfood exports, graded for global B2B buyers.
               </p>
               <span className="go">Enter Food Products →</span>
             </div>

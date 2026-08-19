@@ -230,6 +230,123 @@ async function main() {
           { url: '/images/makhana.png', isPrimary: true, alt: 'Commercial 4 Suta Makhana' }
         ]
       }
+    },
+    {
+      name: 'Fresh Organic Indian Amla (Gooseberry)',
+      slug: 'fresh-organic-indian-amla-gooseberry',
+      category: 'food',
+      subcategory: 'Fresh Amla',
+      description: 'Direct farm-sourced fresh Indian Gooseberry (Phyllanthus Emblica) harvested from organic orchards in Gujarat and Uttar Pradesh. Hand-graded for uniform large diameter, rich emerald color, exceptional juiciness, and unmatched Vitamin C concentration. Cold-chain packed for international air and reefer ocean freight.',
+      shortDesc: 'Farm-fresh, hand-graded organic Indian Gooseberry packed for cold-chain global export.',
+      gradeInfo: 'Grade A (35-45mm+)',
+      moq: '1000 KG',
+      packaging: '5kg / 10kg ventilated corrugated export cartons with protective trays; reefer container ready',
+      hsCode: '0810.90.90',
+      seoTitle: 'Fresh Organic Amla (Indian Gooseberry) Exporter | RDH Globals India',
+      seoDescription: 'Direct exporter of fresh Grade A Indian Amla (Gooseberry). Farm-sourced, APEDA & FSSAI certified with refrigerated cold-chain export to USA, UAE, Europe, and Asia.',
+      specifications: JSON.stringify({
+        "Fruit Diameter": "35mm - 45mm+ (Grade A Large)",
+        "Appearance": "Lustrous Emerald Green, Firm Texture",
+        "Vitamin C Content": "600 - 800 mg / 100g",
+        "Harvest Season": "October - March (Fresh), Year-round Reefer",
+        "Storage Temp": "4°C - 7°C (Cold Chain)",
+        "Certifications": "APEDA, FSSAI, Global G.A.P. Compliant"
+      }),
+      isFeatured: true,
+      sortOrder: 10,
+      images: {
+        create: [
+          { url: '/images/fresh_amla.jpg', isPrimary: true, alt: 'Fresh Organic Indian Amla Gooseberry' }
+        ]
+      }
+    },
+    {
+      name: 'Sweet & Tangy Sun-Dried Amla Candy',
+      slug: 'sweet-tangy-sun-dried-amla-candy',
+      category: 'food',
+      subcategory: 'Amla Candy',
+      description: 'Artisanal sun-dried Indian Gooseberry candied segments crafted using traditional slow-osmosis sweetening or digestive spice infusions (Chatpata). High in natural antioxidants, dietary fiber, and Vitamin C. Free from artificial colors, synthetic flavors, or chemical preservatives — perfect for modern healthy confectionery and retail snack packs.',
+      shortDesc: 'Chewy, antioxidant-rich candied amla bites — available in Sweet and Chatpata spiced blends.',
+      gradeInfo: 'Premium Dried Segments',
+      moq: '250 KG',
+      packaging: '100g / 250g / 500g nitrogen-flushed stand-up pouches or 10kg bulk food-grade cartons',
+      hsCode: '2008.99.99',
+      seoTitle: 'Sweet & Chatpata Amla Candy Bulk Exporter & Manufacturer | RDH Globals',
+      seoDescription: 'Wholesale manufacturer & exporter of natural dried Amla Candy. Gluten-free, preservative-free superfood confectionery for private label and supermarket distribution.',
+      specifications: JSON.stringify({
+        "Available Variants": "Sweet Candied / Chatpata Masala",
+        "Moisture": "< 12%",
+        "Texture": "Chewy, Soft-Dried Segments",
+        "Preservatives": "Zero Artificial Preservatives / Colors",
+        "Dietary": "Gluten-Free, 100% Vegetarian",
+        "Shelf Life": "12 Months"
+      }),
+      isFeatured: true,
+      sortOrder: 11,
+      images: {
+        create: [
+          { url: '/images/amla_candy.jpg', isPrimary: true, alt: 'Sweet and Tangy Sun-Dried Amla Candy' }
+        ]
+      }
+    },
+    {
+      name: 'Pure Organic Herbal Amla Powder',
+      slug: 'pure-organic-herbal-amla-powder',
+      category: 'food',
+      subcategory: 'Amla Powder',
+      description: 'Micro-pulverized organic Indian Gooseberry powder produced from shade-dried, de-seeded wild amla fruits. Retains peak tannin, polyphenol, and ascorbic acid potency. Ideal for nutraceutical formulations, herbal teas, dietary superfood blends, cosmetic hair care, and pharmaceutical extraction.',
+      shortDesc: '100% pure shade-dried organic amla powder for nutraceutical, food & wellness manufacturing.',
+      gradeInfo: '80 - 100 Mesh Ultra-Fine',
+      moq: '200 KG',
+      packaging: '25kg multi-wall paper drums with inner food-grade poly liner or custom retail foil pouches',
+      hsCode: '1106.30.90',
+      seoTitle: 'Organic Amla Powder Bulk Manufacturer & Exporter | RDH Globals India',
+      seoDescription: 'Direct B2B exporter of 100% pure organic Amla (Emblica Officinalis) powder. Heavy-metal tested, microbial-screened for nutraceutical and cosmetic industries.',
+      specifications: JSON.stringify({
+        "Purity": "100% Pure Emblica Officinalis (No fillers)",
+        "Mesh Size": "80 - 100 Mesh Fine Powder",
+        "Color": "Natural Light Greenish Brown",
+        "Moisture": "< 6.5%",
+        "Total Ash": "< 7%",
+        "Certifications": "FSSAI, Organic Certified, NABL Lab Tested",
+        "Shelf Life": "24 Months"
+      }),
+      isFeatured: true,
+      sortOrder: 12,
+      images: {
+        create: [
+          { url: '/images/amla_powder.jpg', isPrimary: true, alt: 'Pure Organic Herbal Amla Powder' }
+        ]
+      }
+    },
+    {
+      name: '100% Pure Cold-Pressed Amla Juice',
+      slug: 'pure-cold-pressed-amla-juice',
+      category: 'food',
+      subcategory: 'Amla Juice',
+      description: 'Cold-pressed virgin juice extracted from freshly harvested whole organic Indian Gooseberries. Unpasteurized or flash-pasteurized options with zero added sugar, synthetic colors, or water dilution. Rich in bioactive bioflavonoids and immune-boosting Vitamin C, packaged for bulk beverage bottling and wellness distribution.',
+      shortDesc: '100% virgin cold-pressed Indian Gooseberry juice — unfiltered, pure, and additive-free.',
+      gradeInfo: 'Pure Virgin Cold-Pressed',
+      moq: '500 Litres',
+      packaging: '500ml / 1000ml UV-protected glass/PET bottles or 200L food-grade aseptic bulk drums',
+      hsCode: '2009.89.90',
+      seoTitle: 'Cold-Pressed Pure Amla Juice Wholesale Exporter | RDH Globals India',
+      seoDescription: 'B2B bulk supplier & exporter of 100% pure cold-pressed Amla Juice. Zero added sugar, private label bottling, and container-ready export shipping.',
+      specifications: JSON.stringify({
+        "Extraction Method": "Single Cold Press (Hydraulic)",
+        "Brix": "8° - 11° Brix",
+        "Added Sugar / Water": "0% (Undiluted)",
+        "Acidity (as Citric)": "2.0% - 3.2%",
+        "Packaging Options": "Retail Bottling / 200L Aseptic Bulk Drums",
+        "Shelf Life": "12 Months"
+      }),
+      isFeatured: false,
+      sortOrder: 13,
+      images: {
+        create: [
+          { url: '/images/amla_juice.jpg', isPrimary: true, alt: '100% Pure Cold-Pressed Amla Juice' }
+        ]
+      }
     }
   ];
 
