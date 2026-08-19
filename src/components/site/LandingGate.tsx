@@ -147,7 +147,7 @@ export default function LandingGate() {
                 📍 Corporate Office
               </div>
               <div>RDH Globals Trade House</div>
-              <div style={{ opacity: 0.75 }}>SG Highway, Ahmedabad, Gujarat 380054, India</div>
+              <div style={{ opacity: 0.75 }}>1061/18 Chandan Nagar Sanigawan Road, Kanpur, Uttar Pradesh 208021, India</div>
             </div>
 
             <div>
@@ -282,7 +282,7 @@ export default function LandingGate() {
               Premier Indian Exporter of Premium Makhana &amp; Luxury Home Textiles.
             </p>
             <div style={{ fontSize: '.8rem', opacity: .7, marginTop: '14px', lineHeight: 1.5 }}>
-              📍 SG Highway, Ahmedabad, Gujarat 380054, India
+              📍 1061/18 Chandan Nagar Sanigawan Road, Kanpur, Uttar Pradesh 208021, India
             </div>
           </div>
 

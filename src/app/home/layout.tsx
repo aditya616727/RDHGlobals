@@ -109,7 +109,7 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
             </p>
             <div style={{ marginTop: '16px', fontSize: '.8rem', opacity: .7, lineHeight: 1.6 }}>
               📍 <strong>Corporate Office:</strong><br />
-              SG Highway, Ahmedabad, Gujarat 380054, India
+              1061/18 Chandan Nagar Sanigawan Road, Kanpur, Uttar Pradesh 208021, India
             </div>
           </div>
 
@@ -125,8 +125,9 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
 
             <div className="footer-col">
               <h4>Products &amp; Catalog</h4>
-              <Link href="/products?category=food" onClick={() => setTheme('food')}>Makhana &amp; Food</Link>
-              <Link href="/products?category=textile" onClick={() => setTheme('textile')}>Home Textiles</Link>
+              <Link href="/products?line=makhana" onClick={() => setTheme('food')}>🌾 Makhana Range</Link>
+              <Link href="/products?line=amla" onClick={() => setTheme('food')}>🍈 Amla Range</Link>
+              <Link href="/products?category=textile" onClick={() => setTheme('textile')}>🧵 Home Textiles</Link>
               <Link href="/brochure">E-Catalogue Flipbook</Link>
               <Link href="/blog">Market Insights</Link>
             </div>

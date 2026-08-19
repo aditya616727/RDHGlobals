@@ -121,11 +121,13 @@ const organizationJsonLd = {
   logo: "https://rdhglobals.com/images/logo.jpeg",
   description:
     "RDH Globals is a premier Indian International Trade House and direct manufacturer/exporter of premium raw, roasted, and flavoured Makhana (fox nuts), fresh & processed Amla (Indian gooseberry), and hospitality home textiles.",
-  foundingLocation: { "@type": "Place", name: "Gujarat, India" },
+  foundingLocation: { "@type": "Place", name: "Kanpur, Uttar Pradesh, India" },
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Ahmedabad",
-    addressRegion: "Gujarat",
+    streetAddress: "1061/18 Chandan Nagar Sanigawan Road",
+    addressLocality: "Kanpur",
+    addressRegion: "Uttar Pradesh",
+    postalCode: "208021",
     addressCountry: "IN",
   },
   contactPoint: {

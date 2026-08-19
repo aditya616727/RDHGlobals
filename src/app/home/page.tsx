@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { useTheme } from '@/lib/theme-context';
 import { themeContent } from '@/lib/content';
 import Link from 'next/link';
@@ -7,6 +8,11 @@ import Link from 'next/link';
 export default function HomePage() {
   const { theme } = useTheme();
   const c = themeContent[theme];
+  const [foodLine, setFoodLine] = useState<'makhana' | 'amla'>('makhana');
+
+  const displayedFoodProducts = foodLine === 'makhana' 
+    ? (c as any).makhanaProducts || c.defaultProducts 
+    : (c as any).amlaProducts || c.defaultProducts;
 
   return (
     <>
@@ -193,8 +199,47 @@ export default function HomePage() {
           <span className="eyebrow">Catalog</span>
           <h2>{c.prodTitle}</h2>
           <p>{c.prodSub}</p>
+
+          {/* Dedicated Food Division Line Toggle */}
+          {theme === 'food' && (
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '12px', margin: '24px 0 32px' }}>
+              <button
+                className={`btn ${foodLine === 'makhana' ? 'btn-solid' : 'btn-ghost'}`}
+                style={{
+                  padding: '10px 24px',
+                  borderRadius: '999px',
+                  fontSize: '.92rem',
+                  fontWeight: 600,
+                  cursor: 'pointer',
+                  background: foodLine === 'makhana' ? 'var(--primary)' : 'var(--secondary)',
+                  color: foodLine === 'makhana' ? '#fff' : 'var(--text)',
+                  border: '1px solid rgba(0,0,0,.1)',
+                }}
+                onClick={() => setFoodLine('makhana')}
+              >
+                🌾 Makhana Range (Fox Nuts)
+              </button>
+              <button
+                className={`btn ${foodLine === 'amla' ? 'btn-solid' : 'btn-ghost'}`}
+                style={{
+                  padding: '10px 24px',
+                  borderRadius: '999px',
+                  fontSize: '.92rem',
+                  fontWeight: 600,
+                  cursor: 'pointer',
+                  background: foodLine === 'amla' ? 'var(--primary)' : 'var(--secondary)',
+                  color: foodLine === 'amla' ? '#fff' : 'var(--text)',
+                  border: '1px solid rgba(0,0,0,.1)',
+                }}
+                onClick={() => setFoodLine('amla')}
+              >
+                🍈 Amla Range (Indian Gooseberry)
+              </button>
+            </div>
+          )}
+
           <div className="prod-grid">
-            {c.defaultProducts.map((item, i) => {
+            {(theme === 'food' ? displayedFoodProducts : c.defaultProducts).map((item: any, i: number) => {
               const name = typeof item === 'string' ? item : item.name;
               const img = typeof item === 'string' ? null : item.img;
               return (
@@ -206,6 +251,16 @@ export default function HomePage() {
                 </div>
               );
             })}
+          </div>
+
+          <div style={{ textAlign: 'center', marginTop: '36px' }}>
+            <Link
+              href={theme === 'food' ? `/products?line=${foodLine}` : '/products?category=textile'}
+              className="btn btn-solid"
+              style={{ padding: '14px 32px' }}
+            >
+              View Full {theme === 'food' ? (foodLine === 'makhana' ? 'Makhana' : 'Amla') : 'Textile'} Specifications →
+            </Link>
           </div>
         </div>
       </section>
@@ -284,7 +339,7 @@ export default function HomePage() {
               <div>✉️ <strong>Sales Desk:</strong> sales@rdhglobals.com</div>
               <div>📞 <strong>Phone Desk:</strong> +91 98771 18868 / +91 99910 36618</div>
               <div>💬 <strong>WhatsApp Line:</strong> +91 98771 18868</div>
-              <div>📍 <strong>Corporate Office:</strong> RDH Globals, SG Highway, Ahmedabad, Gujarat 380054, India</div>
+              <div>📍 <strong>Corporate Office:</strong> RDH Globals, 1061/18 Chandan Nagar Sanigawan Road, Kanpur, Uttar Pradesh 208021, India</div>
             </div>
           </div>
           <form
