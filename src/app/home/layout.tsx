@@ -17,7 +17,7 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
           <Link href="/home" className="logo" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
             <Image
               src="/images/logo.jpeg"
-              alt="RDH Globals"
+              alt="RVDH Globals"
               width={150}
               height={40}
               style={{ objectFit: 'contain', borderRadius: '4px' }}
@@ -97,14 +97,14 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
             <div className="logo" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
               <Image
                 src="/images/logo.jpeg"
-                alt="RDH Globals Logo"
+                alt="RVDH Globals Logo"
                 width={160}
                 height={45}
                 style={{ objectFit: 'contain', borderRadius: '4px', filter: 'brightness(1.1)' }}
               />
             </div>
             <p style={{ opacity: .7, fontSize: '.85rem', marginTop: '14px', lineHeight: 1.6 }}>
-              <strong>RDH Globals — International Trade House</strong><br />
+              <strong>RVDH Globals — International Trade House</strong><br />
               Bridging authentic Indian agricultural &amp; home textile production to global B2B procurement.
             </p>
             <div style={{ marginTop: '16px', fontSize: '.8rem', opacity: .7, lineHeight: 1.6 }}>
@@ -137,8 +137,8 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
               <a href="tel:+919877118868" style={{ fontWeight: 600, color: '#fff' }}>📞 +91 98771 18868</a>
               <a href="tel:+919991036618" style={{ fontWeight: 600, color: '#fff' }}>📞 +91 99910 36618</a>
               <a href="https://wa.me/919877118868" target="_blank" rel="noopener noreferrer" style={{ color: '#25D366' }}>💬 WhatsApp Export Desk</a>
-              <a href="mailto:export@rdhglobals.com">📧 export@rdhglobals.com</a>
-              <a href="mailto:sales@rdhglobals.com">✉️ sales@rdhglobals.com</a>
+              <a href="mailto:export@RVDHglobals.com">📧 export@RVDHglobals.com</a>
+              <a href="mailto:sales@RVDHglobals.com">✉️ sales@RVDHglobals.com</a>
             </div>
 
             <div className="footer-col">
@@ -149,17 +149,17 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
             </div>
           </div>
         </div>
-        <div className="wrap fine">© 2026 RDH Globals — International Trade House. All rights reserved.</div>
+        <div className="wrap fine">© 2026 RVDH Globals — International Trade House. All rights reserved.</div>
       </footer>
 
       {/* WhatsApp FAB */}
       <a
-        href="https://wa.me/919800000000?text=Hello%20RDH%20Globals%2C%20I%27m%20interested%20in%20your%20export%20products"
+        href="https://wa.me/919800000000?text=Hello%20RVDH%20Globals%2C%20I%27m%20interested%20in%20your%20export%20products"
         target="_blank"
         rel="noopener noreferrer"
         className="whatsapp-fab"
-        aria-label="Chat on WhatsApp with RDH Globals Export Desk"
-        title="Chat with RDH Globals Export Desk"
+        aria-label="Chat on WhatsApp with RVDH Globals Export Desk"
+        title="Chat with RVDH Globals Export Desk"
       >
         💬
       </a>

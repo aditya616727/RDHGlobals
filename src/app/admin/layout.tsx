@@ -20,7 +20,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
         <div>
           <div style={{ marginBottom: '32px' }}>
             <div style={{ fontSize: '1.2rem', fontWeight: 700, letterSpacing: '.02em' }}>
-              RDH Globals
+              RVDH Globals
             </div>
             <div style={{ fontSize: '.72rem', opacity: 0.6, textTransform: 'uppercase', letterSpacing: '.1em', marginTop: '2px' }}>
               Admin Management Portal

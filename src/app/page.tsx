@@ -18,7 +18,7 @@ const LandingGateContent = dynamic(() => import('@/components/site/LandingGate')
         color: '#2F5233',
         opacity: 0.6,
       }}>
-        RDH Globals — International Trade House
+        RVDH Globals — International Trade House
       </div>
     </div>
   ),

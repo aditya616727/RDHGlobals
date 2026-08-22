@@ -4,7 +4,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { DEFAULT_PRODUCTS, ProductItem } from '@/lib/default-products';
 
-const BASE_URL = 'https://rdhglobals.com';
+const BASE_URL = 'https://RVDHglobals.com';
 
 async function getProductBySlug(slug: string): Promise<ProductItem | null> {
   try {
@@ -50,7 +50,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   if (!product) return {};
 
-  const title = product.seoTitle || `${product.name} — B2B Wholesale Exporter | RDH Globals`;
+  const title = product.seoTitle || `${product.name} — B2B Wholesale Exporter | RVDH Globals`;
   const description =
     product.seoDescription ||
     product.shortDesc ||
@@ -112,7 +112,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     product.name,
     product.subcategory || '',
     categoryLabel,
-    'RDH Globals',
+    'RVDH Globals',
     'Indian Exporter',
     'Wholesale Exporter India',
     'Container Load Shipping',
@@ -136,7 +136,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       title,
       description,
       url: `${BASE_URL}/products/${product.slug}`,
-      siteName: 'RDH Globals — Premier Indian Export House',
+      siteName: 'RVDH Globals — Premier Indian Export House',
       images: [
         {
           url: primaryImage,
@@ -153,7 +153,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       title,
       description,
       images: [primaryImage],
-      site: '@rdhglobals',
+      site: '@RVDHglobals',
     },
     robots: {
       index: true,
@@ -208,7 +208,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
     mpn: product.slug,
     brand: {
       '@type': 'Brand',
-      name: 'RDH Globals',
+      name: 'RVDH Globals',
     },
     offers: {
       '@type': 'Offer',
@@ -220,7 +220,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
       itemCondition: 'https://schema.org/NewCondition',
       seller: {
         '@type': 'Organization',
-        name: 'RDH Globals',
+        name: 'RVDH Globals',
         url: BASE_URL,
       },
     },
@@ -320,7 +320,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
           {/* Right Column: Specification Details */}
           <div>
             <span className="eyebrow" style={{ color: 'var(--primary)' }}>
-              RDH Globals Export Item • {product.category === 'food' ? '🌾 Food Division' : '🧵 Textile Division'}
+              RVDH Globals Export Item • {product.category === 'food' ? '🌾 Food Division' : '🧵 Textile Division'}
             </span>
             <h1 style={{ fontSize: '2.2rem', marginBottom: '14px', lineHeight: 1.2, letterSpacing: '-0.02em' }}>
               {product.name}

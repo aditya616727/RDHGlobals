@@ -191,7 +191,7 @@ function ProductsCatalog() {
   return (
     <div className="wrap" style={{ padding: '60px 28px 100px' }}>
       <div style={{ marginBottom: '40px', textAlign: 'center' }}>
-        <span className="eyebrow">RDH Globals Catalog</span>
+        <span className="eyebrow">RVDH Globals Catalog</span>
         <h1 style={{ fontSize: '2.5rem', marginBottom: '12px', letterSpacing: '-0.02em' }}>Export Product Range</h1>
         <p style={{ opacity: 0.7, maxWidth: '680px', margin: '0 auto', fontSize: '1rem', lineHeight: 1.6 }}>
           Graded, laboratory-tested, and container-ready food &amp; home textile export items for global markets.

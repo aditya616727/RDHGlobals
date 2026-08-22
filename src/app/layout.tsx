@@ -18,11 +18,11 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: "RDH Globals — International Trade House | Makhana, Amla & Home Textiles Exporter",
-    template: "%s | RDH Globals",
+    default: "RVDH Globals — International Trade House | Makhana, Amla & Home Textiles Exporter",
+    template: "%s | RVDH Globals",
   },
   description:
-    "RDH Globals is a premier Indian International Trade House specializing in premium Makhana (fox nuts), fresh & processed Amla (Indian gooseberry), and luxury home textiles. FSSAI, APEDA certified. Exporting to 12+ countries.",
+    "RVDH Globals is a premier Indian International Trade House specializing in premium Makhana (fox nuts), fresh & processed Amla (Indian gooseberry), and luxury home textiles. FSSAI, APEDA certified. Exporting to 12+ countries.",
   keywords: [
     "Makhana Supplier in India",
     "Makhana Supplier from India",
@@ -79,7 +79,7 @@ export const metadata: Metadata = {
     "Flavoured Makhana Supplier in Sri Lanka",
     "Makhana Supplier from India to Sri Lanka",
     "Makhana Exporter from India to Sri Lanka",
-    "RDH Globals",
+    "RVDH Globals",
     "fox nuts wholesale supplier",
     "Indian gooseberry bulk export",
     "Indian home textiles exporter",
@@ -88,20 +88,20 @@ export const metadata: Metadata = {
     "APEDA registered exporter",
     "FSSAI certified food exporter",
   ],
-  authors: [{ name: "RDH Globals" }],
-  creator: "RDH Globals",
+  authors: [{ name: "RVDH Globals" }],
+  creator: "RVDH Globals",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://rdhglobals.com",
-    siteName: "RDH Globals International Trade House",
-    title: "RDH Globals — International Trade House | Premium Indian Makhana, Amla & Home Textiles Exporter",
+    url: "https://RVDHglobals.com",
+    siteName: "RVDH Globals International Trade House",
+    title: "RVDH Globals — International Trade House | Premium Indian Makhana, Amla & Home Textiles Exporter",
     description:
       "Direct Indian exporter & manufacturer of raw, roasted & flavoured makhana (fox nuts), fresh and processed Amla products, and luxury home textiles. Shipping to USA, UAE, UK, Canada, Australia, Malaysia & worldwide.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "RDH Globals — International Trade House",
+    title: "RVDH Globals — International Trade House",
     description:
       "Premier Indian Makhana, Amla & Textile Exporter. FSSAI & APEDA certified. Shipping container loads worldwide.",
   },
@@ -115,12 +115,12 @@ export const metadata: Metadata = {
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "RDH Globals",
-  alternateName: "RDH Globals International Trade House",
-  url: "https://rdhglobals.com",
-  logo: "https://rdhglobals.com/images/logo.jpeg",
+  name: "RVDH Globals",
+  alternateName: "RVDH Globals International Trade House",
+  url: "https://RVDHglobals.com",
+  logo: "https://RVDHglobals.com/images/logo.jpeg",
   description:
-    "RDH Globals is a premier Indian International Trade House and direct manufacturer/exporter of premium raw, roasted, and flavoured Makhana (fox nuts), fresh & processed Amla (Indian gooseberry), and hospitality home textiles.",
+    "RVDH Globals is a premier Indian International Trade House and direct manufacturer/exporter of premium raw, roasted, and flavoured Makhana (fox nuts), fresh & processed Amla (Indian gooseberry), and hospitality home textiles.",
   foundingLocation: { "@type": "Place", name: "Kanpur, Uttar Pradesh, India" },
   address: {
     "@type": "PostalAddress",
@@ -132,7 +132,7 @@ const organizationJsonLd = {
   },
   contactPoint: {
     "@type": "ContactPoint",
-    email: "export@rdhglobals.com",
+    email: "export@RVDHglobals.com",
     contactType: "sales",
   },
   areaServed: ["US", "CA", "AE", "GB", "AU", "MY", "BD", "MV", "TH", "LK", "DE", "SG", "NL", "NP"],

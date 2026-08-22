@@ -23,7 +23,7 @@ async function main() {
       moq: '500 KG',
       packaging: '10 kg moisture-sealed vacuum bags in 5-ply corrugated export boxes',
       hsCode: '0813.40.90',
-      seoTitle: 'Raw Premium Makhana (5 & 6 Suta Jumbo) Exporter | RDH Globals',
+      seoTitle: 'Raw Premium Makhana (5 & 6 Suta Jumbo) Exporter | RVDH Globals',
       seoDescription: 'Direct Indian exporter of 5 & 6 Suta jumbo raw Makhana (fox nuts). APEDA & FSSAI certified, laboratory tested for B2B global importers and snack manufacturers.',
       specifications: JSON.stringify({
         "Grade Size": "5 & 6 Suta (Jumbo)",
@@ -52,7 +52,7 @@ async function main() {
       moq: '250 KG',
       packaging: '50g/100g nitrogen-flushed pouch packs or 5kg master packs',
       hsCode: '2008.19.90',
-      seoTitle: 'Himalayan Pink Salt Roasted Makhana Wholesale Exporter | RDH Globals',
+      seoTitle: 'Himalayan Pink Salt Roasted Makhana Wholesale Exporter | RVDH Globals',
       seoDescription: 'Wholesale exporter of Himalayan pink salt roasted makhana snacks. Gluten-free, non-GMO, protein-rich superfood ready for retail packaging and international export.',
       specifications: JSON.stringify({
         "Flavor": "Himalayan Pink Salt",
@@ -80,7 +80,7 @@ async function main() {
       moq: '250 KG',
       packaging: 'Nitrogen-flushed foil pouch (70g) or master export box',
       hsCode: '2008.19.90',
-      seoTitle: 'Peri Peri Flavoured Makhana B2B Exporter | RDH Globals India',
+      seoTitle: 'Peri Peri Flavoured Makhana B2B Exporter | RVDH Globals India',
       seoDescription: 'Indian manufacturer & exporter of Peri Peri spiced roasted fox nuts. High margin superfood snack with private label packaging & full customs clearance.',
       specifications: JSON.stringify({
         "Flavor": "Fiery Peri Peri",
@@ -107,7 +107,7 @@ async function main() {
       moq: '200 KG',
       packaging: 'Nitrogen-flushed foil pouch (50g/100g) or retail gift box',
       hsCode: '1806.90.90',
-      seoTitle: 'Chocolate Coated Makhana Exporter & Manufacturer | RDH Globals',
+      seoTitle: 'Chocolate Coated Makhana Exporter & Manufacturer | RVDH Globals',
       seoDescription: 'Gourmet dark chocolate coated roasted makhana superfood snack. Direct export supply for confectionery distributors, supermarkets, and private labels.',
       specifications: JSON.stringify({
         "Flavor": "Dark Chocolate",
@@ -135,7 +135,7 @@ async function main() {
       moq: '250 KG',
       packaging: 'Nitrogen-flushed foil pouch (70g) or master export box',
       hsCode: '2008.19.90',
-      seoTitle: 'Cheese & Herbs Roasted Makhana Wholesale Exporter | RDH Globals',
+      seoTitle: 'Cheese & Herbs Roasted Makhana Wholesale Exporter | RVDH Globals',
       seoDescription: 'Export supplier of Cheese & Italian Herbs roasted makhana snacks. Clean ingredients, long shelf-life, and FSSAI/APEDA compliant container shipping.',
       specifications: JSON.stringify({
         "Flavor": "Cheese & Mixed Herbs",
@@ -162,7 +162,7 @@ async function main() {
       moq: '250 KG',
       packaging: 'Nitrogen-flushed foil pouch (70g) or master export box',
       hsCode: '2008.19.90',
-      seoTitle: 'Cream & Onion Roasted Makhana Export Supplier | RDH Globals',
+      seoTitle: 'Cream & Onion Roasted Makhana Export Supplier | RVDH Globals',
       seoDescription: 'B2B export of Cream & Onion flavoured roasted makhana (fox nuts). Popular savory snack for global retail chains, distributors, and private brands.',
       specifications: JSON.stringify({
         "Flavor": "Cream & Onion",
@@ -189,7 +189,7 @@ async function main() {
       moq: '250 KG',
       packaging: 'Nitrogen-flushed foil pouch (70g) or master export box',
       hsCode: '2008.19.90',
-      seoTitle: 'Pudina Mint Roasted Makhana Exporter | RDH Globals India',
+      seoTitle: 'Pudina Mint Roasted Makhana Exporter | RVDH Globals India',
       seoDescription: 'Authentic Indian Pudina (Mint) & Lime roasted makhana exporter. Low-calorie healthy snack with container-ready packaging and export documentation.',
       specifications: JSON.stringify({
         "Flavor": "Pudina (Mint) & Lime",
@@ -216,7 +216,7 @@ async function main() {
       moq: '1000 KG',
       packaging: '25kg HDPE woven sacks with inner liner',
       hsCode: '0813.40.90',
-      seoTitle: '4 Suta Commercial Grade Raw Makhana B2B Supplier | RDH Globals',
+      seoTitle: '4 Suta Commercial Grade Raw Makhana B2B Supplier | RVDH Globals',
       seoDescription: 'Industrial bulk supplier of 4 Suta commercial raw Makhana for food processing, flour milling, and breakfast cereals. Consistent grading & wholesale pricing.',
       specifications: JSON.stringify({
         "Grade": "4 Suta",
@@ -242,7 +242,7 @@ async function main() {
       moq: '1000 KG',
       packaging: '5kg / 10kg ventilated corrugated export cartons with protective trays; reefer container ready',
       hsCode: '0810.90.90',
-      seoTitle: 'Fresh Organic Amla (Indian Gooseberry) Exporter | RDH Globals India',
+      seoTitle: 'Fresh Organic Amla (Indian Gooseberry) Exporter | RVDH Globals India',
       seoDescription: 'Direct exporter of fresh Grade A Indian Amla (Gooseberry). Farm-sourced, APEDA & FSSAI certified with refrigerated cold-chain export to USA, UAE, Europe, and Asia.',
       specifications: JSON.stringify({
         "Fruit Diameter": "35mm - 45mm+ (Grade A Large)",
@@ -271,7 +271,7 @@ async function main() {
       moq: '250 KG',
       packaging: '100g / 250g / 500g nitrogen-flushed stand-up pouches or 10kg bulk food-grade cartons',
       hsCode: '2008.99.99',
-      seoTitle: 'Sweet & Chatpata Amla Candy Bulk Exporter & Manufacturer | RDH Globals',
+      seoTitle: 'Sweet & Chatpata Amla Candy Bulk Exporter & Manufacturer | RVDH Globals',
       seoDescription: 'Wholesale manufacturer & exporter of natural dried Amla Candy. Gluten-free, preservative-free superfood confectionery for private label and supermarket distribution.',
       specifications: JSON.stringify({
         "Available Variants": "Sweet Candied / Chatpata Masala",
@@ -300,7 +300,7 @@ async function main() {
       moq: '200 KG',
       packaging: '25kg multi-wall paper drums with inner food-grade poly liner or custom retail foil pouches',
       hsCode: '1106.30.90',
-      seoTitle: 'Organic Amla Powder Bulk Manufacturer & Exporter | RDH Globals India',
+      seoTitle: 'Organic Amla Powder Bulk Manufacturer & Exporter | RVDH Globals India',
       seoDescription: 'Direct B2B exporter of 100% pure organic Amla (Emblica Officinalis) powder. Heavy-metal tested, microbial-screened for nutraceutical and cosmetic industries.',
       specifications: JSON.stringify({
         "Purity": "100% Pure Emblica Officinalis (No fillers)",
@@ -330,7 +330,7 @@ async function main() {
       moq: '500 Litres',
       packaging: '500ml / 1000ml UV-protected glass/PET bottles or 200L food-grade aseptic bulk drums',
       hsCode: '2009.89.90',
-      seoTitle: 'Cold-Pressed Pure Amla Juice Wholesale Exporter | RDH Globals India',
+      seoTitle: 'Cold-Pressed Pure Amla Juice Wholesale Exporter | RVDH Globals India',
       seoDescription: 'B2B bulk supplier & exporter of 100% pure cold-pressed Amla Juice. Zero added sugar, private label bottling, and container-ready export shipping.',
       specifications: JSON.stringify({
         "Extraction Method": "Single Cold Press (Hydraulic)",
@@ -367,7 +367,7 @@ async function main() {
       moq: '100 Sets per color',
       packaging: 'Eco-friendly embroidered cotton tote bag or retail PVC zip box',
       hsCode: '6302.21.00',
-      seoTitle: '600 TC Egyptian Cotton Bedsheets Exporter & Manufacturer | RDH Globals',
+      seoTitle: '600 TC Egyptian Cotton Bedsheets Exporter & Manufacturer | RVDH Globals',
       seoDescription: 'Manufacturer & exporter of 600 Thread Count Egyptian cotton bedsheet sets for 5-star hotels and luxury home retailers. OEKO-TEX certified, bespoke sizing.',
       specifications: JSON.stringify({
         "Material": "100% Long-Staple Combed Cotton",
@@ -396,7 +396,7 @@ async function main() {
       moq: '200 Sets',
       packaging: 'Compressed bales with sea-freight waterproofing',
       hsCode: '6302.31.00',
-      seoTitle: '300 TC Percale Hotel Bed Linen Wholesale Exporter | RDH Globals',
+      seoTitle: '300 TC Percale Hotel Bed Linen Wholesale Exporter | RVDH Globals',
       seoDescription: 'Commercial hotel bed linen collection engineered for 150+ wash cycles. Crisp 300 TC percale weave for global resort chains and institutional hospitality buyers.',
       specifications: JSON.stringify({
         "Material": "80% Cotton / 20% Polyester blend",
@@ -423,7 +423,7 @@ async function main() {
       moq: '150 Sets',
       packaging: 'Rigid presentation gift box or retail hanger bag',
       hsCode: '6302.21.00',
-      seoTitle: '400 TC Jacquard Luxury Hotel Linen Exporter | RDH Globals',
+      seoTitle: '400 TC Jacquard Luxury Hotel Linen Exporter | RVDH Globals',
       seoDescription: 'Bespoke 400 TC jacquard woven luxury hotel linen collection. Custom motifs, bio-washed cotton, and institutional export packaging for international hotels.',
       specifications: JSON.stringify({
         "Technique": "Damask Jacquard Weave",

@@ -80,7 +80,7 @@ export default function AddProductPage() {
     <div style={{ maxWidth: '800px' }}>
       <h1 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: '8px' }}>Add New Export Product</h1>
       <p style={{ opacity: 0.6, marginBottom: '32px' }}>
-        Fill in the details to publish a new product to the RDH Globals export catalog.
+        Fill in the details to publish a new product to the RVDH Globals export catalog.
       </p>
 
       <form

@@ -47,7 +47,7 @@ export async function POST(request: Request) {
         productInterest: productInterest || 'General Inquiry',
         volume: volume || '',
         timeline: timeline || '',
-        message: message || 'Inquiry submitted from RDH Globals export website.',
+        message: message || 'Inquiry submitted from RVDH Globals export website.',
         status: 'NEW',
       },
     });

@@ -11,7 +11,7 @@ export default function BrochurePage() {
   return (
     <div className="wrap" style={{ padding: '60px 28px 100px' }}>
       <div style={{ textAlign: 'center', marginBottom: '40px' }}>
-        <span className="eyebrow">RDH Globals E-Catalogue</span>
+        <span className="eyebrow">RVDH Globals E-Catalogue</span>
         <h1 style={{ fontSize: '2.5rem', marginBottom: '12px' }}>Export Product Brochure</h1>
         <p style={{ opacity: 0.7, maxWidth: '640px', margin: '0 auto' }}>
           Interactive digital catalogue for B2B buyers and international procurement partners.
@@ -43,7 +43,7 @@ export default function BrochurePage() {
         >
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid rgba(0,0,0,.08)', paddingBottom: '20px' }}>
             <div>
-              <h2 style={{ fontSize: '1.6rem', color: 'var(--primary)' }}>RDH Globals — {theme === 'food' ? 'Food Division' : 'Home Textile Division'}</h2>
+              <h2 style={{ fontSize: '1.6rem', color: 'var(--primary)' }}>RVDH Globals — {theme === 'food' ? 'Food Division' : 'Home Textile Division'}</h2>
               <span style={{ fontSize: '.85rem', color: 'var(--text-muted)' }}>Catalog Issue 2026-2027 • Standard Specification</span>
             </div>
             <span className="chip" style={{ background: 'var(--primary)', color: '#fff' }}>Verified Exporter</span>
@@ -64,7 +64,7 @@ export default function BrochurePage() {
             <span style={{ fontSize: '.84rem', color: 'var(--text-muted)' }}>FSSAI • APEDA </span>
             <button
               className="btn btn-solid"
-              onClick={() => alert('Brochure PDF download started. (RDH-Globals-2026-Catalog.pdf)')}
+              onClick={() => alert('Brochure PDF download started. (RVDH-Globals-2026-Catalog.pdf)')}
             >
               📥 Download PDF Brochure
             </button>

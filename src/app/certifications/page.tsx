@@ -1,8 +1,8 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Certifications & Compliance | RDH Globals',
-  description: 'FSSAI, APEDA export compliance certifications held by RDH Globals.',
+  title: 'Certifications & Compliance | RVDH Globals',
+  description: 'FSSAI, APEDA export compliance certifications held by RVDH Globals.',
 };
 
 export default function CertificationsPage() {
@@ -31,7 +31,7 @@ export default function CertificationsPage() {
         <span className="eyebrow">Trust &amp; Licensing</span>
         <h1 style={{ fontSize: '2.5rem', marginBottom: '12px' }}>Certifications &amp; Quality Compliance</h1>
         <p style={{ opacity: 0.7, maxWidth: '640px', margin: '0 auto' }}>
-          Every shipment handled by RDH Globals adheres strictly to international compliance standards.
+          Every shipment handled by RVDH Globals adheres strictly to international compliance standards.
         </p>
       </div>
 

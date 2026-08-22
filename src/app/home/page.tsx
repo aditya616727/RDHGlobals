@@ -112,7 +112,7 @@ export default function HomePage() {
 
             <div>
               <span className="eyebrow" style={{ color: 'var(--primary)' }}>
-                About RDH Globals — International Trade House
+                About RVDH Globals — International Trade House
               </span>
               <h2 style={{ fontSize: '2.4rem', marginBottom: '20px', lineHeight: 1.2 }}>
                 = uncompromised quality &amp; complete traceability.
@@ -154,7 +154,7 @@ export default function HomePage() {
               <div style={{ fontSize: '1.8rem', marginBottom: '10px' }}>🔬</div>
               <h4 style={{ fontSize: '1.05rem', marginBottom: '6px', color: 'var(--primary)' }}>100% Lab Tested</h4>
               <p style={{ fontSize: '.86rem', opacity: 0.75, lineHeight: 1.5 }}>
-                RDH Globals Every batch is NABL lab-tested for moisture, purity, and compliance (FSSAI, APEDA, ISO, OEKO-TEX certified).
+                RVDH Globals Every batch is NABL lab-tested for moisture, purity, and compliance (FSSAI, APEDA, ISO, OEKO-TEX certified).
               </p>
             </div>
 
@@ -335,11 +335,11 @@ export default function HomePage() {
               with pricing and lead times within one business day.
             </p>
             <div className="contact-info">
-              <div>📧 <strong>Primary Export Email:</strong> export@rdhglobals.com</div>
-              <div>✉️ <strong>Sales Desk:</strong> sales@rdhglobals.com</div>
+              <div>📧 <strong>Primary Export Email:</strong> export@RVDHglobals.com</div>
+              <div>✉️ <strong>Sales Desk:</strong> sales@RVDHglobals.com</div>
               <div>📞 <strong>Phone Desk:</strong> +91 98771 18868 / +91 99910 36618</div>
               <div>💬 <strong>WhatsApp Line:</strong> +91 98771 18868</div>
-              <div>📍 <strong>Corporate Office:</strong> RDH Globals, 1061/18 Chandan Nagar Sanigawan Road, Kanpur, Uttar Pradesh 208021, India</div>
+              <div>📍 <strong>Corporate Office:</strong> RVDH Globals, 1061/18 Chandan Nagar Sanigawan Road, Kanpur, Uttar Pradesh 208021, India</div>
             </div>
           </div>
           <form

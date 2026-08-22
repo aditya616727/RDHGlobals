@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Export Market Insights & Trade Reports | RDH Globals',
+  title: 'Export Market Insights & Trade Reports | RVDH Globals',
   description: 'Latest export industry insights, Makhana global market trends, cotton textile specifications, and customs trade advice.',
 };
 
@@ -39,7 +39,7 @@ export default function BlogPage() {
         <span className="eyebrow">Industry Knowledge</span>
         <h1 style={{ fontSize: '2.5rem', marginBottom: '12px' }}>Export Market Insights</h1>
         <p style={{ opacity: 0.7, maxWidth: '640px', margin: '0 auto' }}>
-          Industry trade reports, global market analysis, and export compliance guides from the RDH Globals desk.
+          Industry trade reports, global market analysis, and export compliance guides from the RVDH Globals desk.
         </p>
       </div>
 

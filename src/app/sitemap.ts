@@ -3,7 +3,7 @@ import { prisma } from '@/lib/prisma';
 import { DEFAULT_PRODUCTS } from '@/lib/default-products';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = 'https://rdhglobals.com';
+  const baseUrl = 'https://RVDHglobals.com';
 
   const staticPages = [
     '',
